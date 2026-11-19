@@ -1,0 +1,73 @@
+---
+import Layout from "../layouts/Layout.astro";
+import "../styles/subcontractor.css"
+import "aos/dist/aos.css";
+import image from "@astrojs/react";
+import waterImage from "../assets/join-team/subcon-2.png";
+import { Image } from "astro:assets";
+
+const currentYear = new Date().getFullYear();
+import { getSEO } from "../utils/getSEO";
+const seo = getSEO("subcontractor");
+---
+
+<Layout title={seo.title} description={seo.description} keywords={seo.keywords}>
+
+    <section>
+<div class="inner-banner">
+  <div class="inner-banner-content">
+    <h1>Subcontractors Application Form</h1>
+
+  </div>
+  </div>
+</section>
+
+<section class="subcontractor-wrapper">
+  <div class="subcontractor-container">
+
+    <div class="form-header">
+      <p class="top-label">• JOIN THE TEAM</p>
+      <h2>Subcontractors Application</h2>
+    </div>
+
+    <div class="form-layout">
+
+      <!-- LEFT SIDE IMAGE SECTION -->
+      <div class="left-visual">
+        <div class="dot-pattern pattern-top"></div>
+         <Image src={waterImage} alt="Handshake" class="handshake-img" />
+
+        <div class="dot-pattern pattern-bottom"></div>
+      </div>
+
+      <!-- RIGHT SIDE – PLACE GHL FORM HERE -->
+      <div class="right-form">
+        <!-- ⭐ PASTE YOUR GHL FORM EMBED CODE HERE ⭐ -->
+         
+  <iframe
+    src="https://api.leadconnectorhq.com/widget/form/uy81EX8fqs9GiOgqGDBK"
+    style="width:100%;height:100%;border:none;border-radius:3px"
+    id="inline-uy81EX8fqs9GiOgqGDBK" 
+    data-layout="{'id':'INLINE'}"
+    data-trigger-type="alwaysShow"
+    data-trigger-value=""
+    data-activation-type="alwaysActivated"
+    data-activation-value=""
+    data-deactivation-type="neverDeactivate"
+    data-deactivation-value=""
+    data-form-name="Subcontractor"
+    data-height="1347"
+    data-layout-iframe-id="inline-uy81EX8fqs9GiOgqGDBK"
+    data-form-id="uy81EX8fqs9GiOgqGDBK"
+    title="Subcontractor"
+        >
+</iframe>
+<script src="https://link.msgsndr.com/js/form_embed.js"></script>
+      </div>
+
+    </div>
+
+  </div>
+</section>
+
+</Layout>

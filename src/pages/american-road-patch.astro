@@ -1,0 +1,95 @@
+---
+import Layout from "../layouts/Layout.astro";
+import "../styles/american-road-patch.css"
+import "aos/dist/aos.css";
+
+const currentYear = new Date().getFullYear();
+import { getSEO } from "../utils/getSEO";
+const seo = getSEO("american-road");
+---
+
+<Layout title={seo.title} description={seo.description} keywords={seo.keywords}>
+
+    <section>
+<div class="inner-banner">
+  <div class="inner-banner-content">
+    <h1>American Road Patch™ – The Ultimate <br> Pavement and
+Concrete Solution</h1>
+
+  </div>
+  </div>
+</section>
+  <!-- ============================= -->
+  <!-- 1) PLUMBING SERVICES (Left Image) -->
+  <!-- ============================= -->
+<section class="services-section">
+
+  <div class="section-wrapper plumbing-wrapper" id="irrigation-services">
+
+    <!-- IMAGE -->
+    <div class="plumbing-image-box">
+      <div class="dots"></div>
+      <img src="/servicesimages/road-patch-services.png" class="section-img" alt="Irrigation Services
+" data-aos="fade-right">
+    </div>
+
+    <!-- TEXT -->
+    <div class="plumbing-content">
+      <h2   class="section-title section-title reveal-letters">
+
+Durable and Reliable<br>
+Concrete & Asphalt Repair<br>
+with American Road Patch™
+</h2>
+      <p   class="section-text" data-aos="fade-up">
+    TWS Service & Solutions utilizes American Road Patch™, an innovative Peel & Seal Pavement Patch, 
+    to provide long-lasting repairs for concrete and asphalt surfaces. Whether addressing potholes, cracks, utility cuts, or deteriorated pavement, this advanced solution creates a reinforced, 
+    waterproof seal that extends the life of repairs and prevents further damage.
+      </p>
+      <div class="button-row"  data-aos="zoom-in">
+  <a href="/arp-sell-sheet.pdf"  target="_blank" class="primary-btn">Product Info Brochure</a>
+  <a href="/TWS-innovative-product-feature.pdf" target="_blank" class="secondary-btn">Product Feature Brochure</a>
+</div>
+  </div>
+    </div>
+
+</section>
+
+
+<div class="two-column-wrapper">
+  
+  <!-- LEFT COLUMN -->
+  <div class="column-box">
+    <h3 class="column-title">Why American Road Patch™ for Concrete & Asphalt Repairs?</h3>
+
+<ul class="column-list">
+  <li>Waterproof Seal – Prevents water intrusion, reducing long-term deterioration.</li>
+  <li>High-Strength Fiberglass Grid Reinforcement – Strengthens and stabilizes repaired surfaces.</li>
+  <li>Asphalt & Concrete Compatibility – Suitable for various pavement types.</li>
+  <li>Quick & Easy Application – No need for specialized equipment or prolonged road closures.</li>
+  <li>Traffic Ready Immediately – Repairs can be driven on immediately after installation.</li>
+  <li>Plow & Weather Resistant – Stands up to extreme conditions, heavy traffic, and snow removal.</li>
+  <li>Cost-Effective & Long-Lasting – Reduces repeat repairs, saving time and maintenance costs.</li>
+</ul>
+  </div>
+
+  <!-- DIVIDER -->
+  <div class="vertical-divider"></div>
+
+  <!-- RIGHT COLUMN -->
+  <div class="column-box">
+ <h3 class="column-title">Concrete & Pavement Repair Applications</h3>
+
+<ul class="column-list">
+  <li>Pothole Repairs – Fast, durable sealing to prevent further breakdown.</li>
+  <li>Crack & Joint Sealing – Prevents water penetration and pavement deterioration.</li>
+  <li>Utility Cut & Manhole Surrounds – Reinforces edges and provides a lasting seal.</li>
+  <li>Concrete & Asphalt Bridge Joint Repairs – Smooths uneven joints and strengthens transitions.</li>
+  <li>Distressed Pavement Reinforcement – Prevents weak areas from worsening.</li>
+  <li>Speed Bump Protection – Shields traffic-calming structures from wear and tear.</li>
+</ul>
+
+  </div>
+
+</div>
+</Layout>

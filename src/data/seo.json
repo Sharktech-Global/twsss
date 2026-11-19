@@ -1,0 +1,107 @@
+{
+    "defaults": {
+        "title": "Facility Maintenance Services NSW | Water Management & Capital Works | TWS",
+        "description": "TWS Service & Solutions delivers facility maintenance services, water management, fire protection, dust suppression and capital works solutions across NSW.",
+        "keywords": "TWS, water management, water treatment solutions , integrated maintenance, irrigation and dust suppression system"
+    },
+    "home": {
+        "title": "Facility Maintenance Services Australia | TWS Service & Solutions",
+        "description": "TWS delivers integrated facility maintenance, water management, fire safety and irrigation solutions across NSW. Your trusted facility specialist.",
+        "keywords": "facility maintenance NSW, water management, integrated facility solutions, fire safety, TWS Service & Solutions"
+    },
+    "about": {
+        "title": "Facility Maintenance Company NSW | About TWS Service & Solutions",
+        "description": "Keep your property operating at its best with professional facility maintenance services across Australia. TWS Service & Solutions delivers reliable, compliant, and responsive maintenance.",
+        "keywords": "about TWS, facility maintenance company, integrated maintenance specialist, NSW facility services"
+    },
+    "digital-solutions": {
+        "title": "Digital Solutions | TWS Service & Solutions",
+        "description": "Smart digital solutions from TWS - IoT monitoring, automated leak detection and data-driven facility management for efficient, sustainable operations.",
+        "keywords": "digital facility solutions, IoT monitoring, smart water management, automated leak detection"
+    },
+    "project": {
+        "title": "Our Projects | TWS Service & Solutions",
+        "description": "Explore TWS Service & Solutions projects across water management, fire safety, irrigation and integrated facility maintenance throughout NSW.",
+        "keywords": "TWS projects, facility maintenance projects, water management case studies, NSW" 
+    },
+    "irrigation-service": {
+        "title": "Irrigation & Dust Suppression Systems | TWS Service & Solutions",
+        "description": "TWS designs and maintains irrigation and dust suppression systems that conserve water and keep your site compliant, safe and efficient.",
+        "keywords": "irrigation systems, dust suppression, water-efficient irrigation, site dust control NSW"
+    },
+    "integrated-service": {
+        "title": "Integrated Maintenance Services | TWS Service & Solutions",
+        "description": "End-to-end integrated facility maintenance from TWS - one trusted partner for water, fire, irrigation and building services across NSW.",
+        "keywords": "integrated maintenance services, facility maintenance NSW, building services, integrated FM"
+    },
+    "plumbing-service": {
+        "title": "Professional Plumbing Services in Australia | Emergency & Residential Plumbing",
+        "description": "Expert plumbing services in Sydney - leak detection, burst pipe repairs, drain cleaning and preventative maintenance for commercial and facility plumbing.",
+        "keywords": "plumbing services Sydney, emergency plumbing services Sydney, burst pipe repairs Sydney, plumbing leak detection Sydney, commercial plumbing"
+    },
+    "fire-service": {
+        "title": "Fire Services Australia | Fire Hydrant & Extinguisher Maintenance",
+        "description": "Fire safety services Australia - fire hydrant upgrades and repairs, plus fire extinguisher testing, tagging and replacement for commercial, industrial and public facilities.",
+        "keywords": "fire safety services Australia, fire protection services Australia, fire hydrant upgrades, fire hydrant repairs, fire extinguisher testing, fire extinguisher tagging, fire extinguisher replacement, commercial fire services"
+    },
+    "fire-protection-capability": {
+        "title": "Fire Protection Services Australia | TWS Service & Solutions",
+        "description": "Fire Protection Services Australia for commercial, industrial and public facilities - passive fire inspections, fire-stopping, hydrant repairs and extinguisher testing.",
+        "keywords": "Fire Protection Services Australia, Fire Safety Services Australia, Fire Protection Company Australia, commercial fire services Australia, passive fire inspections, fire hydrant upgrades, fire extinguisher testing and tagging"
+    },
+    "passive-fire-service": {
+        "title": "Passive Fire Services | TWS Service & Solutions",
+        "description": "Need reliable plumbing services in Australia? We provide expert plumbing solutions, including repairs, installations, maintenance, and emergency plumbing for homes and businesses. Contact us today.",
+        "keywords": "Plumbing Services Sydney,emergency plumbing services sydney,plumbing leak detection sydney,burst pipe repairs sydney"
+    },
+    "water-tanks-service": {
+        "title": "Water Management Services Sydney | Cooling Tower Maintenance Sydney",
+        "description": "Expert water management services in Sydney including cooling tower maintenance, water tank refurbishment, water treatment systems and compliance solutions.",
+        "keywords": "water tank refurbishment, water tank installation, tank maintenance, water storage NSW"
+    },
+    "blog": {
+        "title": "Blog | TWS Service & Solutions",
+        "description": "Insights on water management, fire safety, sustainability and facility maintenance from the experts at TWS Service & Solutions.",
+        "keywords": "facility maintenance blog, water management tips, fire safety, sustainability"
+    },
+    "contact": {
+        "title": "Contact Us | TWS Service & Solutions",
+        "description": "Get in touch with TWS Service & Solutions for integrated facility maintenance, water, fire and irrigation solutions across NSW.",
+        "keywords": "contact TWS, facility maintenance enquiry, NSW facility services contact"
+    },
+    "american-road": {
+        "title": "American Road Project | TWS Service & Solutions",
+        "description": "Discover the American Road project delivered by TWS Service & Solutions - integrated facility maintenance and water management in action.",
+        "keywords": "American Road project, TWS case study, facility maintenance project NSW"
+    },
+    "irrigear-tahmoo": {
+        "title": "Irrigear Tahmoor Project | TWS Service & Solutions",
+        "description": "See how TWS delivered the Irrigear Tahmoor project - irrigation and water management solutions tailored to the site's needs.",
+        "keywords": "Irrigear Tahmoor, irrigation project, water management case study, TWS"
+    },
+    "skyrise": {
+        "title": "Skyrise Protect Project | TWS Service & Solutions",
+        "description": "Explore the Skyrise Protect project by TWS Service & Solutions - fire protection and integrated facility maintenance delivered with precision.",
+        "keywords": "Skyrise Protect, fire protection project, facility maintenance, TWS"
+    },
+    "water-generator": {
+        "title": "Atmospheric Water Generators | TWS Service & Solutions",
+        "description": "TWS atmospheric water generators produce clean drinking water from air - a sustainable water source for facilities and remote sites.",
+        "keywords": "atmospheric water generator, water from air, sustainable water source, AWG"
+    },
+    "subcontractor": {
+        "title": "Subcontractor Application | TWS Service & Solutions",
+        "description": "Apply to become a TWS subcontractor. Join our network delivering integrated facility maintenance and water solutions across NSW.",
+        "keywords": "subcontractor application, TWS subcontractors, facility maintenance contractors NSW"
+    },
+    "personnel": {
+        "title": "Personnel Onboarding | TWS Service & Solutions",
+        "description": "TWS personnel onboarding - start your journey with our integrated facility maintenance team delivering water, fire and irrigation services.",
+        "keywords": "personnel onboarding, TWS careers, facility maintenance jobs NSW"
+    },
+    "employee": {
+        "title": "Employee Application | TWS Service & Solutions",
+        "description": "Apply for a role at TWS Service & Solutions and help deliver integrated facility maintenance and water solutions across NSW.",
+        "keywords": "employee application, TWS careers, facility maintenance jobs, join TWS"
+    }
+}

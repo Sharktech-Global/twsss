@@ -1,0 +1,356 @@
+---
+import { FaGlobe } from "react-icons/fa";
+import { RiInstagramFill } from "react-icons/ri";
+import { BiLogoFacebook } from "react-icons/bi";
+import { MdMarkEmailRead } from "react-icons/md";
+import { BiSolidPhoneCall } from "react-icons/bi";
+import { ImLocation2 } from "react-icons/im";
+import { SiLinkedin } from "react-icons/si";
+import waterImage from "../assets/main-in-footer-logo.png";
+import footerLogo from "../assets/logo-light.png";
+import { Image } from "astro:assets";
+---
+
+
+<!-- FOOTER MAIN -->
+<footer class="footer">
+
+    <section class="cta-section">
+  <div class="cta-content">
+    <h2 class="reveal-letters">Let's Build Your Custom <br>Solution!</h2>
+  <a href="/contact" class="cta-btn"><span>Contact Us</span></a>
+  </div>
+</section>
+
+  <div class="footer-container">
+
+    <!-- LEFT LOGO + TEXT -->
+    <div class="footer-col">
+      <Image  src={waterImage}  alt="Logo"  class="footer-logo"  data-aos="fade-right"/>
+      <p>Leading the way in sustainability and efficiency across Australia</p>
+
+      <div class="footer-social">
+        <span class="social-icon"><a href="https://www.instagram.com/twsserviceandsolutions" target="_blank" aria-label="Instagram"><RiInstagramFill aria-hidden="true" /></a></span>
+        <span class="social-icon"><a href="https://www.facebook.com/twsserviceandsolutions" target="_blank" aria-label="Facebook"><BiLogoFacebook aria-hidden="true" /></a></span>
+        <span class="social-icon"><a href="https://www.linkedin.com/company/tws-service-and-solutions" target="_blank" aria-label="LinkedIn"><SiLinkedin aria-hidden="true" />
+</a></span>
+      </div>
+    </div>
+
+    <!-- QUICK LINKS -->
+    <div class="footer-col">
+      <h4>Quick Links</h4>
+      <ul>
+        <li><a href="/">Home</a></li>
+        <li><a href="/about-us">About Us</a></li>
+        <li><a href="/services/integrated-maintenance-services">Services</a></li>
+        <li><a href="/american-road-patch">Products</a></li>
+        <li><a href="/projects">Projects</a></li>
+        <li><a href="/blogs">Blogs</a></li>
+      </ul>
+    </div>
+    <!-- CONTACT INFO -->
+   <div class="footer-col">
+  <h4>Contact Us</h4>
+  <ul class="contact-list">
+    <li><span class="icon"><MdMarkEmailRead /></span><a  href="mailto: info@twsss.com.au" >  info@twsss.com.au</a></li>
+    <li><span class="icon"><BiSolidPhoneCall /><a href="tel:+611300782252">
+      </span>
+      <span >+61 1300 78 22 52</span>
+    </a></li>
+    <li><span class="icon"><ImLocation2 /></span> Location 1: Unit1, 92 York St Tahmoor</li>
+    <li><span class="icon"><ImLocation2 /></span> Location 2: 240 Albatross Road, Nowra Hill</li>
+  </ul>
+</div>
+
+  </div>
+
+  <!-- BOTTOM COPYRIGHT -->
+<div class="footer-bottom" style="text-align:center;">
+  <p class="fot21">© 2025 TWS Service & Solutions.</p>
+  <p class="fot21">Powered By </p>
+
+   <a href="https://vcpility.com.au/" target="_blank">
+<Image 
+  src={footerLogo}
+  alt="Shark Tech Logo"
+  width={100}
+  class="mt-2"
+/>  </a>
+</div>
+
+  
+</footer>
+
+<style>/* GLOBAL FIX */
+/* GLOBAL FIX */
+.fot21
+ {
+    margin: 6px;
+}
+
+.social-icon a {
+  color: white !important;
+}
+
+
+
+/* CTA SECTION */
+.cta-section {
+  background: #3B4644;
+  padding: 25px 2%;
+}
+
+.cta-content {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  max-width: 1200px;
+  margin: auto;
+  padding: 20px;
+}
+
+.cta-section h2 {
+  color: white;
+  font-size: 45px;
+  font-weight: 600;
+  line-height: 1.2;
+  margin: 0;
+  width: 60%;
+}
+.cta-btn {
+  position: relative;
+  display: inline-block;
+  padding: 12px 30px;
+  font-size: 18px;
+  font-weight: 600;
+  color: #0D8443; /* initial text color */
+  background: #fff; /* initial background */
+  overflow: hidden;
+  text-decoration: none;
+  border-radius: 8px;
+  transition: color 0.5s ease;
+}
+
+/* Sliding green background */
+.cta-btn::before {
+  content: '';
+  position: absolute;
+  bottom: 0;
+  left: 0;
+  width: 0%;
+  height: 100%;
+  background-color: #0D8443; /* green fill */
+  z-index: 0; /* behind the text */
+  transition: width 0.5s ease;
+}
+
+/* Text above the background */
+.cta-btn span {
+  position: relative;
+  z-index: 1;
+  transition: color 0.5s ease;
+}
+
+/* On hover: fill from left to right */
+.cta-btn:hover::before {
+  width: 100%;
+}
+
+/* On hover: change text color to white */
+.cta-btn:hover span {
+  color: #fff;
+}
+
+
+
+
+
+
+/* FOOTER AREA */
+.footer {
+  background: #3B4644;
+  color: white;
+  padding: 0px 5% 20px;
+}
+
+.footer-container {
+  max-width: 1200px;
+  margin: auto;
+padding: 35px 30px 0px 30px;  
+  border-top: 2px solid #5d6c6b;
+  display: grid;
+  grid-template-columns: 1.5fr 1fr 1.3fr;
+  column-gap: 60px;
+  align-items: flex-start;
+}
+
+
+
+/* FIRST COLUMN */
+.footer-col .footer-logo {
+  width: 300px;
+  margin-bottom: 15px;
+}
+
+.footer-col:first-child p {
+  margin: 10px 0 20px;
+  line-height: 1.5;
+  max-width: 340px;
+}
+
+
+
+/* SOCIAL ICONS */
+.footer-social {
+  display: flex;
+  gap: 18px;
+  margin-top: 12px;
+}
+
+.social-icon {
+  width: 42px;
+  height: 42px;
+  border-radius: 50%;
+  border: 2px solid #8aa1a0;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  font-size: 18px;
+}
+
+
+
+/* TITLES */
+.footer-col h4 {
+  font-size: 22px;
+  font-weight: 700;
+  margin-bottom: 18px;
+}
+
+
+
+/* QUICK LINKS */
+.footer-col ul {
+  padding: 0;
+  list-style: none;
+  margin: 0;
+}
+
+.footer-col ul li {
+  margin: 10px 0;
+}
+
+.footer-col ul li a {
+  font-size: 15px;
+  color: white;
+  text-decoration: none;
+}
+
+
+
+/* CONTACT LIST */
+.contact-list {
+  list-style: none;
+  padding: 0;
+  margin: 0;
+}
+
+.contact-list li {
+  display: flex;
+  align-items: flex-start;
+  gap: 10px;
+  margin-bottom: 10px;
+  font-size: 15px;
+  line-height: 1.4;
+}
+
+.contact-list .icon {
+  font-size: 18px;
+  margin-top: 2px;
+}
+
+
+
+/* FOOTER BOTTOM */
+.footer-bottom {
+  max-width: 1200px;
+  margin: 25px auto 0;
+  border-top: 2px solid #4c5a58;
+  padding-top: 15px;
+  text-align: center;
+  font-size: 14px;
+  color: #d4dcd9;
+}
+
+
+
+/* TABLET RESPONSIVE */
+@media (max-width: 1200px) {
+  .footer-container {
+    grid-template-columns: 1fr 1.5fr;
+    column-gap: 50px;
+    row-gap: 35px;
+  }
+
+  .footer-col:first-child {
+    grid-column: span 2;
+  }
+.cta-section h2 {
+  color: white;
+  font-size: 30px;
+}
+}
+
+
+
+/* MOBILE RESPONSIVE */
+@media (max-width: 768px) {
+
+  .cta-content {
+    flex-direction: column;
+    text-align: center;
+    gap: 20px;
+  }
+
+  .cta-section h2 {
+    font-size: 30px;
+    width: 100%;
+    text-align: center;
+  }
+
+  .cta-btn {
+    font-size: 16px;
+    padding: 12px 28px;
+  }
+
+
+  /* FOOTER MOBILE STACKED */
+  .footer-container {
+    display: flex;
+    flex-direction: column;
+    gap: 28px;
+  }
+
+  .footer-col {
+    width: 100%;
+  }
+
+  .footer-social {
+    justify-content: flex-start;
+  }
+
+  .footer {
+    padding: 0px 0% 18px;
+  }
+}
+
+
+
+.footer-col[data-astro-cid-k2f5zb5c] h4[data-astro-cid-k2f5zb5c] {
+    font-size: 22px;
+    font-weight: 700;
+    margin-bottom: 18px;
+    margin-top: 0px;
+}
+</style>

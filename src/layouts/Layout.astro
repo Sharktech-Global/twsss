@@ -1,0 +1,217 @@
+---
+import Navbar from "../components/Navbar.astro"
+import Footer from "../components/footer.astro"
+import "aos/dist/aos.css";
+const { title, description, keywords } = Astro.props;
+const path = Astro.url.pathname;
+let bodyClass = path === "/" ? "home" : path.replace(/^\/|\/$/g, "").replace(/\//g, "-");
+---
+<!doctype html>
+<html lang="en">
+	<head>
+        <!-- Google Tag Manager -->
+        <script is:inline>(function(w,d,s,l,i){w[l]=w[l]||[];w[l].push({'gtm.start':
+        new Date().getTime(),event:'gtm.js'});var f=d.getElementsByTagName(s)[0],
+        j=d.createElement(s),dl=l!='dataLayer'?'&l='+l:'';j.async=true;j.src=
+        'https://www.googletagmanager.com/gtm.js?id='+i+dl;f.parentNode.insertBefore(j,f);
+        })(window,document,'script','dataLayer','GTM-TXMMTPT3');</script>
+        <!-- End Google Tag Manager -->
+<meta charset="UTF-8" />
+        <meta name="viewport" content="width=device-width" />
+        <link rel="icon" type="image/svg+xml" href="/New Project.svg" />
+        <meta name="generator" content={Astro.generator} /> 
+
+        <title>{title} - TWS Services and Solutions</title>
+        <meta name="description" content={description} />
+        <meta name="keywords" content={keywords} >
+        <link rel="canonical" href="https://www.twsss.com.au/" />
+        
+        <meta property="og:title" content={title} />
+        <meta property="og:description" content={description} />
+        <meta property="og:image" content="https://www.twsss.com.au/images/ogimage.png" />
+        <meta property="og:url" content="https://www.twsss.com.au/" />
+        <meta property="og:type" content="website" />
+
+        <meta name="twitter:card" content="summary_large_image" />
+        <meta name="twitter:title" content={title} />
+        <meta name="twitter:description" content={description} />
+        <meta name="twitter:image" content="https://www.twsss.com.au/images/ogimage.png"/>
+
+
+
+
+		<meta charset="UTF-8" />
+		<meta name="viewport" content="width=device-width" />
+		<link rel="icon" type="image/svg+xml" href="/New Project.svg" />
+		<meta name="generator" content={Astro.generator} />
+		<title>TWS SERVICE & SOLUTIONS</title>
+
+		<!-- Fonts: preconnect first, one combined request, loaded non-render-blocking -->
+		<link rel="preconnect" href="https://fonts.googleapis.com">
+		<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+		<link rel="preload" as="style" href="https://fonts.googleapis.com/css2?family=Plus+Jakarta+Sans:wght@400;500;600;700;800&family=Poppins:wght@400;600&display=swap">
+		<link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Plus+Jakarta+Sans:wght@400;500;600;700;800&family=Poppins:wght@400;600&display=swap" media="print" onload="this.media='all'">
+		<noscript><link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Plus+Jakarta+Sans:wght@400;500;600;700;800&family=Poppins:wght@400;600&display=swap"></noscript>
+
+
+        <script>
+            // Single, bundled AOS init. once:true => each element animates one
+            // time then stops being measured on scroll (avoids forced reflows).
+            import AOS from "aos";
+            AOS.init({
+                duration: 600,
+                once: true,
+                mirror: false,
+            });
+        </script>
+	</head>
+	<body>
+		<!-- Google Tag Manager (noscript) -->
+		<noscript><iframe src="https://www.googletagmanager.com/ns.html?id=GTM-TXMMTPT3"
+		height="0" width="0" style="display:none;visibility:hidden"></iframe></noscript>
+		<!-- End Google Tag Manager (noscript) -->
+		<Navbar/>
+		<slot />
+
+		<Footer/>
+
+	</body>
+
+<elevenlabs-convai agent-id="agent_2701kb4fwpeaedras78gvs0k1g3w"></elevenlabs-convai>
+<script is:inline>
+  /* ElevenLabs chat widget loader.
+     On every screen: defer the third-party bundle until AFTER the page has
+     fully loaded plus a delay, so it stays out of the speed score. An
+     intentional tap/click/keypress summons it right away. */
+  (function () {
+    var DELAY = 4000; // ms to wait after the page finishes loading
+    var loaded = false;
+    var events = ["pointerdown", "keydown", "touchstart"];
+    function load() {
+      if (loaded) return;
+      loaded = true;
+      events.forEach(function (e) { window.removeEventListener(e, load); });
+      var s = document.createElement("script");
+      s.src = "https://unpkg.com/@elevenlabs/convai-widget-embed";
+      s.async = true;
+      s.type = "text/javascript";
+      document.body.appendChild(s);
+    }
+
+    // Intentional interaction still summons it right away.
+    events.forEach(function (e) {
+      window.addEventListener(e, load, { once: true, passive: true });
+    });
+    // Otherwise: wait for full page load, then an idle delay, then load.
+    function scheduleAfterLoad() {
+      setTimeout(function () {
+        if ("requestIdleCallback" in window) {
+          requestIdleCallback(load, { timeout: DELAY + 4000 });
+        } else {
+          load();
+        }
+      }, DELAY);
+    }
+    if (document.readyState === "complete") {
+      scheduleAfterLoad();
+    } else {
+      window.addEventListener("load", scheduleAfterLoad, { once: true });
+    }
+  })();
+</script>
+
+
+  <script is:inline>
+document.addEventListener("DOMContentLoaded", () => {
+  const items = document.querySelectorAll(".reveal-letters");
+
+  items.forEach(item => {
+    const originalHTML = item.innerHTML;
+    item.innerHTML = "";
+
+    const container = document.createElement("div");
+    container.innerHTML = originalHTML;
+
+    let index = 0;
+
+    container.childNodes.forEach(node => {
+      if (node.nodeType === Node.TEXT_NODE) {
+        // Split text into words instead of characters
+        node.textContent.split(/(\s+)/).forEach(word => {
+          if (word.trim() === "") {
+            item.appendChild(document.createTextNode(word));
+            return;
+          }
+
+          // Create a word wrapper
+          const wordSpan = document.createElement("span");
+          wordSpan.classList.add("word");
+
+          // Now split each letter inside word
+          word.split("").forEach(char => {
+            const span = document.createElement("span");
+            span.textContent = char;
+            span.style.animationDelay = `${index * 45}ms`;
+            wordSpan.appendChild(span);
+            index++;
+          });
+
+          item.appendChild(wordSpan);
+        });
+
+      } else if (node.nodeName === "BR") {
+        item.appendChild(document.createElement("br"));
+      }
+    });
+  });
+
+  const observer = new IntersectionObserver(entries => {
+    entries.forEach(entry => {
+      if (entry.isIntersecting) entry.target.classList.add("animate");
+    });
+  }, { threshold: 0.2 });
+
+  document.querySelectorAll(".reveal-letters").forEach(el => observer.observe(el));
+});
+</script>
+
+<style is:inline>
+.reveal-letters span {
+  display: inline-block;
+  opacity: 0;
+  transform: translateX(25px);
+}
+
+.reveal-letters .word {
+  white-space: nowrap;   /* ⭐ Keeps whole word together */
+}
+
+.reveal-letters.animate span {
+  animation: reveal 0.7s cubic-bezier(0.22, 1, 0.36, 1) forwards;
+}
+
+@keyframes reveal {
+  from {
+    opacity: 0;
+    transform: translateX(25px);
+  }
+  to {
+    opacity: 1;
+    transform: translateX(0);
+  }
+}
+.reveal-letters {
+  overflow-wrap: anywhere;
+  white-space: normal;
+  overflow: hidden;
+}
+
+.reveal-letters .word {
+  display: inline-block;
+}
+
+
+</style>
+
+
+</html>

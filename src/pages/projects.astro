@@ -1,0 +1,394 @@
+---
+import Layout from "../layouts/Layout.astro";
+import "../styles/project.css"
+import "aos/dist/aos.css";
+import image from "@astrojs/react";
+import p1 from "../../public/projects/p1.png";
+import p2 from "../../public/projects/p2.png";
+import p3 from "../../public/projects/p3.png";
+import p4 from "../../public/projects/p4.png";
+import p5 from "../../public/projects/p5.png";
+import p6 from "../../public/projects/p6.png";
+import p7 from "../../public/projects/p7.png";
+import p8 from "../../public/projects/p8.png";
+import p9 from "../../public/projects/p9.png";
+import p10 from "../../public/projects/p10.png";
+import p12 from "../../public/projects/p12.png";
+import p13 from "../../public/projects/p13.png";
+import p14 from "../../public/projects/p14.png";
+import p15 from "../../public/projects/p15.jpg";
+import { Image } from "astro:assets";
+const currentYear = new Date().getFullYear();
+import { getSEO } from "../utils/getSEO";
+const seo = getSEO("project");
+---
+
+<Layout title={seo.title} description={seo.description} keywords={seo.keywords}>
+
+<section>
+   <div class="inner-banner">
+   <div class="inner-banner-content">
+    <h1>Projects</h1>
+    <p>Home / Projects</p>
+   </div>
+   </div>
+</section>
+
+
+<div class="projects-layout">
+
+  <!-- LEFT SIDEBAR -->
+  <aside class="projects-sidebar">
+    <h3>Projects</h3>
+
+    <ul>
+      <li onclick="showProject('p1')" class="active">Picton Sewage Treatment Plant Reuse Farm Upgrade <span>↗</span></li>
+      <li onclick="showProject('p2')">Sewer Ejector Pump Upgrade <span>↗</span></li>
+      <li onclick="showProject('p3')">Landscape Thirlmere Landscape Design & Construct <span>↗</span></li>
+      <li onclick="showProject('p4')">Southern Highland Water Treatment Plant <span>↗</span></li>
+      <li onclick="showProject('p5')">Bungonia Pumping and Commercial Reverse Osmosis Water Treatment Plant <span>↗</span></li>
+      <li onclick="showProject('p6')" >Consultation And New Water Standards Writing <span>↗</span></li>
+      <li onclick="showProject('p7')">Sydney Central Station Critical Plumbing Works <span>↗</span></li>
+      <li onclick="showProject('p8')">QT Hotel Critical Plumbing Works <span>↗</span></li>
+      <li onclick="showProject('p9')">Didthol Mountain Trail Restoration <span>↗</span></li>
+      <li onclick="showProject('p10')">Montague Island Infrastructure Works <span>↗</span></li>
+      <li onclick="showProject('p11')">Merromans Local Aboriginal Land Council Civil Works <span>↗</span></li>
+      <li onclick="showProject('p12')">Australian Wildlife Sanctuary Sewage Upgrade <span>↗</span></li>
+      <li onclick="showProject('p13')">Lismore – 4.5m Deep Repair <span>↗</span></li>
+      <li onclick="showProject('p14')">Dubbo – Water Infrastructure Upgrade <span>↗</span></li>
+      <li onclick="showProject('p15')">Full Water Tank Refurbishment <span>↗</span></li>
+    </ul>
+  </aside>
+
+  <!-- RIGHT CONTENT -->
+  <section class="projects-content">
+
+    <!-- DEFAULT SHOWN -->
+    <div id="p5" class="project-details">
+      <h2>Bungonia Pumping and Commercial Reverse Osmosis Water Treatment Plant</h2>
+
+      <p>
+        Located in Bungonia on the lower tablelands of New South Wales, this project transformed a fully operational 
+        farm—complete with cattle and a large orchard—by addressing the challenge of unusable groundwater. We designed, 
+        supplied, installed, and commissioned a commercial-grade reverse osmosis treatment plant, which now produces approximately 
+        5 million liters of high-quality water annually, enabling full farm operations. Our commitment continues with ongoing support 
+        and servicing for the property.
+      </p>
+      <div class="image-shine">
+      <Image src={p5}   alt="Water Generator"   class="project-image "   data-aos="fade-right"/>
+      </div>
+    </div>
+
+    <!-- Other pages -->
+    <div id="p1" class="project-details show">
+      <h2>Picton Sewage Treatment Plant Reuse Farm Upgrade</h2>
+      <p>
+      The project involved a comprehensive inspection and testing of a failed sewer ejector system, where our team meticulously
+      diagnosed the underlying faults before replacing the entire system. This included the installation of a custom-built control
+      panel crafted to precise specifications, the replacement of pump sets and control panels, and the upgrading and refurbishment
+      of the pot system, valve sets, and plumbing. Through expert execution and attention to detail, we restored full operational
+      efficiency and ensured long-term reliability.
+      </p>
+      <div class="image-shine">
+      <Image src={p1}   alt="Water Generator"   class="project-image "   data-aos="fade-right"/>
+      </div>
+    </div>
+
+ <!-- Other pages -->
+    <div id="p2" class="project-details">
+      <h2>Sewer Ejector Pump Upgrade</h2>
+      <p>
+        The project involved a comprehensive inspection and testing of a failed sewer ejector system, 
+        where our team meticulously diagnosed the underlying faults before replacing the entire system. This included 
+        the installation of a custom-built control panel crafted to precise specifications, the replacement of pump 
+        sets and control panels, and the upgrading and refurbishment of the pot system, valve sets, and plumbing. 
+        Through expert execution and attention to detail, we restored full operational efficiency and ensured long-term reliability.
+      </p>
+      <div class="image-shine">
+        <Image  src={p2} alt="Water Generator image-shine"   class="project-image" data-aos="fade-right"/>   
+      </div>
+    </div>
+ <!-- Other pages -->
+    <div id="p3" class="project-details">
+      <h2>Landscape Thirlmere Landscape Design & Construct (multi award winning)</h2>
+      <p>
+        TWS Service & Solutions successfully designed and constructed a high-quality landscape, transforming 
+        the space with precision and expertise. The project began with a comprehensive site assessment, followed by a 
+        tailored landscape design to maximize aesthetics and functionality. During construction, key elements such as hardscaping, 
+        a custom-designed pond, and integrated irrigation and lighting systems were seamlessly implemented. Through meticulous planning 
+        and expert execution, the project achieved an outstanding result, earning multiple industry awards for excellence in landscape 
+        design and construction.
+      </p>
+      <div class="image-shine">
+        <Image src={p3} alt="Water Generator image-shine"   class="project-image" data-aos="fade-right"/>    
+      </div>
+    </div>
+ <!-- Other pages -->
+    <div id="p4" class="project-details">
+      <h2>Southern Highland Water Treatment Plant</h2>
+      <p>
+       In the Southern Highlands, TWS Service & Solutions was tasked with extracting unusable groundwater from a 
+       remote property and upgrading it to drinking quality. We engineered and installed an extensive water treatment system 
+       that produces 3 to 5 million liters annually, covering every aspect from design and testing to setup, installation, and 
+       integration of all necessary electrical and plumbing work. Our commitment to excellence continues through ongoing maintenance, 
+       ensuring the system consistently delivers high-quality water for the property.
+      </p>
+      <div class="image-shine">
+        <Image src={p4} alt="Water Generator image-shine"   class="project-image" data-aos="fade-right"/>    
+      </div>              
+    </div>
+ <!-- Other pages -->
+
+    <div id="p6" class="project-details">
+      <h2>Consultation and New Water Standards Writing</h2>
+      <p>
+      Leveraging our established track record with Sydney Water in water main construction and complex water projects, 
+      TWS was commissioned to develop the standards for temporary water supply installations. We set rigorous benchmarks to 
+      ensure high-quality installations, effective public risk management, and the safety of public drinking water. Our ongoing 
+      consultation continues to support Sydney Water on even their most complex projects.
+      </p>
+      <div class="image-shine">
+        <Image src={p6} alt="Water Generator image-shine"   class="project-image" data-aos="fade-right"/>    
+      </div>     
+    </div>
+
+    <div id="p7" class="project-details">
+      <h2>Sydney Central Station Critical Plumbing Works</h2>
+      <p>
+      During the construction phase at Central Station, Sydney Light Rail engaged TWS Service & Solutions to integrate 
+      a robust plumbing network. After other providers faced challenges, TWS was entrusted to design, supply, and install 
+      the essential plumbing infrastructure. Our successful completion of this critical upgrade ensured the seamless integration 
+      of the light rail network, reinforcing our commitment to quality and reliability.
+      </p>
+      <div class="image-shine">
+        <Image src={p7} alt="Water Generator image-shine"   class="project-image" data-aos="fade-right"/>    
+      </div>     
+    </div>
+ 
+    <div id="p8" class="project-details">
+      <h2>QT Hotel Critical Plumbing Works</h2>
+      <p>
+      During the construction phase, TWS Service & Solutions was engaged by Sydney Light Rail to integrate a 
+      state-of-the-art plumbing network into Central Station. After previous providers encountered challenges, 
+      our proven expertise in designing, supplying, and installing critical plumbing infrastructure ensured a seamless 
+      connection of the light rail network. This successful upgrade was essential in modernizing Central Station and enhancing transit 
+      operations.
+      </p>
+      <div class="image-shine">
+        <Image src={p8} alt="Water Generator image-shine"   class="project-image" data-aos="fade-right"/>    
+      </div>     
+    </div>
+    
+    <div id="p9" class="project-details">
+      <h2>Didthul Mountain Trail Restoration</h2>
+      <p>
+      In this remote-access project, our team executed a critical walking track reconstruction through precise planning and 
+      seamless coordination with multiple contractors. Utilizing 198 helicopter lifts to transport materials, we overcame challenging 
+      logistics to restore the trail, enhancing both accessibility and safety in this rugged environment.
+      </p>
+      <div class="image-shine">
+        <Image src={p9} alt="Water Generator image-shine"   class="project-image" data-aos="fade-right"/>    
+      </div>     
+    </div>
+
+    <div id="p10" class="project-details">
+      <h2>Montague Island Infrastructure Works</h2>
+      <p>
+      This environmentally sensitive project required meticulous planning and execution to protect Montague Island’s 
+      delicate ecosystem. Our team coordinated 429 helicopter lifts and managed complex remote-site logistics while adhering to 
+      strict environmental standards, ensuring a sustainable and successful infrastructure upgrade.
+      </p>
+      <div class="image-shine">
+        <Image src={p10} alt="Water Generator image-shine"   class="project-image" data-aos="fade-right"/>    
+      </div>     
+    </div>
+
+    <div id="p11" class="project-details">
+      <h2>Merromans Local Aboriginal Land Council Civil Works</h2>
+      <p>
+      This project focused on essential civil upgrades, including stormwater management, road restoration, 
+      and environmental rehabilitation. With a strong emphasis on community engagement and sustainability, 
+      our team worked closely with local stakeholders to deliver long-term infrastructure solutions that support 
+      both environmental and cultural preservation.
+      </p>
+         
+    </div>
+
+    <div id="p12" class="project-details">
+      <h2>Australian Wildlife Sanctuary Sewage System Upgrade</h2>
+      <p>
+      At the Australian Wildlife Sanctuary, we undertook a comprehensive upgrade of the sewage treatment system to enhance 
+       efficiency and sustainability. Our scope of work included the installation of a state-of-the-art sewage treatment system, 
+       automation alarms, pump upgrades, and control panel enhancements. We also designed and integrated a 6,000-square-meter wastewater 
+       dispersal area into the eucalyptus plantation. This innovative solution not only supports the sanctuary’s wildlife but also 
+       contributes to the sustainability of the environment. Our team was involved in every step of the process, from initial consultation 
+       and design to the execution and commissioning of the system. This project was completed in partnership with the Australian National 
+       Trust, ensuring that the sanctuary’s infrastructure aligns with its conservation goals
+      </p>
+      <div class="image-shine">
+        <Image src={p12} alt="Water Generator image-shine"   class="project-image" data-aos="fade-right"/>    
+      </div>     
+    </div>
+
+    <div id="p13" class="project-details">
+      <h2>Lismore -4.5m Deep Repair to a Collapsed Sewer Main</h2>
+      <p>
+      The project involved the replacement of a collapsed sewer line located 4.5 meters beneath a building within 
+      a major car yard. Due to the depth and complexity of the work, a combination of 20-tonne excavators and 25 
+      tonnes of shoring was utilized to ensure a safe and stable excavation process. Given the high-traffic commercial 
+      environment, careful planning and execution were essential to minimize disruption while maintaining a safe workspace 
+      for both workers and customers. The team implemented strategic work staging, safety barriers, and traffic management 
+      to allow the business to continue operations without interruptions. Despite the challenging conditions, the project was 
+      successfully completed within a minimal timeframe, ensuring the restoration of the sewer infrastructure while upholding the 
+      highest safety and operational standards.
+      </p>
+      <div class="image-shine">
+        <Image src={p13} alt="Water Generator image-shine"   class="project-image" data-aos="fade-right"/>    
+      </div>     
+    </div>
+
+
+    <div id="p13" class="project-details">
+      <h2>Lismore -4.5m Deep Repair to a Collapsed Sewer Main</h2>
+      <p>
+      The project involved the replacement of a collapsed sewer line located 4.5 meters beneath a building within 
+      a major car yard. Due to the depth and complexity of the work, a combination of 20-tonne excavators and 25 
+      tonnes of shoring was utilized to ensure a safe and stable excavation process. Given the high-traffic commercial 
+      environment, careful planning and execution were essential to minimize disruption while maintaining a safe workspace 
+      for both workers and customers. The team implemented strategic work staging, safety barriers, and traffic management 
+      to allow the business to continue operations without interruptions. Despite the challenging conditions, the project was 
+      successfully completed within a minimal timeframe, ensuring the restoration of the sewer infrastructure while upholding the 
+      highest safety and operational standards.
+      </p>
+      <div class="image-shine">
+        <Image src={p13} alt="Water Generator image-shine"   class="project-image" data-aos="fade-right"/>    
+      </div>     
+    </div>
+
+    <div id="p14" class="project-details">
+      <h2>Dubbo – Water Infrastructure Upgrade</h2>
+      <p>
+      <span>In 2013, our team successfully completed a critical water infrastructure upgrade in Dubbo, implementing modern pipeline 
+      rehabilitation techniques to enhance service reliability and efficiency. The project scope included:</span>
+      <br>
+      <ul class="checklist">
+       <li><b>Installation of 350 meters of 125mm PN16 pipeline:</b> Using the pipe bursting method, we minimized excavation, reduced environmental impact, and ensured a durable, high-pressure water supply system.</li>
+       <li><b>Installation of 35 residential water service connections: </b>We integrated new infrastructure with existing properties to improve water reliability and efficiency.</li>
+       <li><b>Hydrant and valve installation: </b>Strategically positioned to optimize firefighting capabilities and facilitate future maintenance.</li>
+      </ul>
+      <span>All works were carried out in full compliance with local water authority regulations, Australian Standards (AS/NZS 2566 for pipeline design and installation), 
+      and workplace health and safety requirements.</span>
+      <ul class="checklist">
+      <li><b>Pressure and leak testing:</b> Conducted to ensure the integrity of the newly installed pipeline, confirming it met PN16 pressure ratings.</li>
+      <li><b>Water quality testing:</b> Performed post-installation to verify compliance with drinking water standards before commissioning.</li>
+      <li><b>System validation and commissioning:</b> Included hydrant flow testing, valve functionality checks, and property service verification to ensure seamless integration into the existing network.</li>
+      </ul>
+      <span>This project was executed with a focus on efficiency, quality assurance, and long-term network performance, 
+      ensuring a reliable water supply for the community.</span>
+      </p>
+      <div class="image-shine">
+        <Image src={p14} alt="Full Water Tank Refurbishment"   class="project-image" data-aos="fade-right"/>    
+      </div>     
+    </div>
+
+     <div id="p15" class="project-details">
+      <h2>Full Water Tank Refurbishment</h2>
+      <p>
+      <span>This project involved the complete refurbishment of an existing water storage tank to extend its service life, 
+            improve waterproofing performance, and bring access and pipework up to current operational standards.
+          </span>
+
+      <h4 class="outlook">Scope of Works</h4>
+      <ul class="checklist">
+       <li>Removal of the existing internal waterproofing membrane</li>
+       <li>Preparation and installation of a new internal waterproofing system</li>
+       <li>Full external respray of the tank to provide long-term protection and a renewed finish</li>
+       <li>Design, fabrication, and installation of custom internal access ladders</li>
+       <li>Re-plumbing and modification of all associated pipework connected to the tank</li>
+      </ul>
+
+      <h4 class="outlook">Outcome</h4>
+     <p><span>All works were carried out in full compliance with local water authority regulations, Australian Standards (AS/NZS 2566 for pipeline design and installation), 
+      and workplace health and safety requirements.</span>
+      </p> 
+      <div class="image-shine">
+        <Image src={p15} alt="Full Water Tank Refurbishment"   class="project-image" data-aos="fade-right"/>    
+      </div>     
+    </div>
+  </section>
+
+</div>
+
+
+<script is:inline>
+function showProject(id) {
+  // hide all
+  document.querySelectorAll(".project-details").forEach(item =>
+    item.classList.remove("show")
+  );
+
+  // show selected
+  document.getElementById(id).classList.add("show");
+
+  // update left sidebar active state
+  document.querySelectorAll(".projects-sidebar li").forEach(li =>
+    li.classList.remove("active")
+  );
+  event.target.classList.add("active");
+}
+</script>
+
+<script is:inline>
+function showProject(id) {
+  // hide all
+  document.querySelectorAll(".project-details").forEach(item =>
+    item.classList.remove("show")
+  );
+
+  // show selected
+  document.getElementById(id).classList.add("show");
+
+  // update active state
+  document.querySelectorAll(".projects-sidebar li").forEach(li =>
+    li.classList.remove("active")
+  );
+  event.target.classList.add("active");
+
+  // 📌 MOBILE: Auto scroll to content
+  if (window.innerWidth <= 800) {
+    document.querySelector(".projects-content").scrollIntoView({
+      behavior: "smooth",
+      block: "start"
+    });
+  }
+}
+</script>
+
+<script is:inline>
+  const params = new URLSearchParams(window.location.search);
+  const openID = params.get("show");
+
+  if (openID) {
+    setTimeout(() => {
+      showProject(openID);
+
+      const section = document.getElementById(openID);
+
+      // 🔥 OFFSET FROM TOP (edit the 120 value as you want)
+      const offset = 120; 
+
+      const y =
+        section.getBoundingClientRect().top +
+        window.scrollY -
+        offset;
+
+      window.scrollTo({
+        top: y,
+        behavior: "smooth"
+      });
+    }, 300);
+  }
+</script>
+
+
+</Layout>

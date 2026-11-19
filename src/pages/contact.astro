@@ -1,0 +1,112 @@
+---
+import Layout from "../layouts/Layout.astro";
+import "../styles/contact.css"
+import "aos/dist/aos.css";
+import image from "@astrojs/react";
+import waterImage from "../assets/home-imgs/imgi_5_call.png";
+import { Image } from "astro:assets";
+
+const currentYear = new Date().getFullYear();
+import { getSEO } from "../utils/getSEO";
+const seo = getSEO("contact");
+---
+
+<Layout title={seo.title} description={seo.description} keywords={seo.keywords}>
+
+<section>
+   <div class="inner-banner">
+   <div class="inner-banner-content">
+    <h1>Contact Us</h1>
+    <p>Home / Contact Us</p>
+   </div>
+   </div>
+</section>
+    <!-- Section Header -->
+
+
+    <section class="contact-section">
+    <div class="contact-container">
+      
+      <!-- Section Header -->
+      <header class="section-header">
+        <p class="section-label">Contact Details</p>
+        <h2 class="section-title">Happy to answer all your questions</h2>
+      </header>
+
+      <!-- Cards Grid -->
+      <div class="cards-grid">
+        
+        <!-- Location Card 1: Tahmoor -->
+        <article class="card">
+          <div class="card-image">
+            <div class="map-wrapper">
+              <iframe 
+                src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d52824.77880842668!2d150.54!3d-34.22!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x6b12ef0f8e3e1a37%3A0x5017d681632c9e0!2sTahmoor%20NSW%202573!5e0!3m2!1sen!2sau!4v1700000000000!5m2!1sen!2sau" 
+                loading="lazy" 
+                referrerpolicy="no-referrer-when-downgrade"
+                title="Tahmoor Location Map">
+              </iframe>
+              <div class="location-pin">
+                <svg viewBox="0 0 24 36" fill="none" xmlns="http://www.w3.org/2000/svg">
+                  <path d="M12 0C5.373 0 0 5.373 0 12c0 9 12 24 12 24s12-15 12-24c0-6.627-5.373-12-12-12z" fill="#1A5632"/>
+                  <circle cx="12" cy="12" r="5" fill="#ffffff"/>
+                </svg>
+              </div>
+            </div>
+          </div>
+          <h3 class="card-heading">Our Location:</h3>
+          <p class="card-text">
+            Located at <strong>Unit 1, 92 York St, Tahmoor</strong>, we proudly serve clients across the <strong>Greater Sydney region, Wollongong, the Blue Mountains, and beyond</strong>
+          </p>
+        </article>
+
+        <!-- Location Card 2: Nowra Hill -->
+        <article class="card">
+          <div class="card-image">
+            <div class="map-wrapper">
+              <iframe 
+                src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d104661.14823845234!2d150.5!3d-34.9!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x6b1310f0e0a0a0a0%3A0x5017d681632c9e0!2sNowra%20Hill%20NSW!5e0!3m2!1sen!2sau!4v1700000000001!5m2!1sen!2sau" 
+                loading="lazy" 
+                referrerpolicy="no-referrer-when-downgrade"
+                title="Nowra Hill Location Map">
+              </iframe>
+              <div class="location-pin">
+                <svg viewBox="0 0 24 36" fill="none" xmlns="http://www.w3.org/2000/svg">
+                  <path d="M12 0C5.373 0 0 5.373 0 12c0 9 12 24 12 24s12-15 12-24c0-6.627-5.373-12-12-12z" fill="#1A5632"/>
+                  <circle cx="12" cy="12" r="5" fill="#ffffff"/>
+                </svg>
+              </div>
+            </div>
+          </div>
+          <h3 class="card-heading">Our Location:</h3>
+          <p class="card-text">
+            Located at <strong>240 Albatross Road, Nowra Hill</strong>, we proudly service <strong>Wollongong, Batemans Bay, Canberra, Goulburn, the Southern Highlands, and surrounding regions</strong>.
+          </p>
+        </article>
+
+        <!-- Contact Us Card -->
+        <article class="card">
+          <div class="card-image contact-info-image">
+             <Image src={waterImage} alt="Friendly customer service team ready to assist"   class="project-image" data-aos="fade-right"/> 
+          </div>
+          <h3 class="card-heading">Contact Us:</h3>
+          <ul class="contact-list">
+            <li>
+              <strong>Tel:</strong>
+              <a href="tel:+61130078252">+61 1300 78 22 52</a>
+            </li>
+            <li>
+              <strong>Enquiries:</strong>
+              <a href="mailto:info@twss.com.au">info@twss.com.au</a>
+            </li>
+            <li>
+              <strong>Accounts:</strong>
+              <a href="mailto:accounts@twsss.com.au">accounts@twsss.com.au</a>
+            </li>
+          </ul>
+        </article>
+
+      </div>
+    </div>
+  </section>
+</Layout>

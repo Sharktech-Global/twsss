@@ -1,0 +1,386 @@
+:root {
+  /* FONT FAMILY */
+  --font-heading: "Plus Jakarta Sans", sans-serif;
+  --font-content: "Plus Jakarta Sans", sans-serif;
+
+}
+body {
+    margin: 0;
+    font-family: var(--font-heading) !important;
+   
+}
+.inner-banner {
+  width: 100%;
+  height: 350px;
+  background: 
+    linear-gradient(rgba(0, 0, 0, 0.45), rgba(0, 0, 0, 0.45)),
+    url(/servicesimages/road-patch-banner.png);
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  text-align: center;
+      background-size: cover;
+    background-repeat: no-repeat;
+    background-attachment: fixed;
+    background-position: center 0px;
+}
+
+.inner-banner-content h1 {
+  color: #fff;
+  font-size: 48px;
+  font-weight: 700;
+  margin: 0;
+}
+
+.inner-banner-content p {
+  color: #e5e5e5;
+  font-size: 18px;
+  margin-top: 10px;
+}
+@media (max-width: 768px) {
+  .inner-banner {
+    height: 220px;
+  }
+
+  .inner-banner-content h1 {
+    font-size: 25px;
+  }
+
+  .inner-banner-content p {
+    font-size: 15px;
+  }
+}
+
+/*--------------*/
+/*the second section*/
+/*--------------*/
+
+  /* ============================= */
+/* GLOBAL CONTAINER LIMIT */
+/* ============================= */
+.services-section {
+  padding:10px;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+}
+
+/* COMMON MAX-WIDTH WRAPPER */
+.section-wrapper {
+  max-width: 1200px;
+  width: 100%;
+  padding: 80px 0px;
+  margin: 0 auto;
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  gap: 60px;
+  scroll-margin-top: 125px; 
+}
+
+/* COMMON IMAGE */
+.section-img {
+  height: auto;
+  border-radius: 20px;
+  display: block;
+  margin-left: 40px;
+}
+
+/* DOT BACKGROUND */
+.dots {
+  position: absolute;
+  left: -30px;
+  top: -20px;
+  width: 180px;
+  height: 180px;
+  background-image: radial-gradient(#d4d4d4 4px, transparent 4px);
+  background-size: 16px 16px;
+  opacity: 0.5;
+  z-index: -1;
+}
+
+/* ============================= */
+/* LEFT-IMAGE SECTION */
+/* ============================= */
+.plumbing-wrapper {
+  flex-direction: row;
+}
+
+.plumbing-image-box,
+.plumbing-content {
+  width: 50%;
+}
+
+.plumbing-image-box {
+  position: relative;
+}
+
+/* ============================= */
+/* RIGHT-IMAGE SECTION */
+/* ============================= */
+.right-image-wrapper {
+  flex-direction: row-reverse;
+  border-top: 1px solid #3b464421;
+      border-bottom: 1px solid #3b464421;
+
+}
+
+.service-image-box,
+.service-content {
+  width: 50%;
+}
+
+.service-image-box {
+  position: relative;
+}
+
+/* ============================= */
+/* TEXT STYLES */
+/* ============================= */
+.section-title {
+font-size: 40px;
+    font-weight: 700;
+    color: #474749;
+    margin-bottom: 20px;
+    margin-top: 0px !important;
+}
+
+.section-text {
+  font-size: 16px;
+  line-height: 1.7;
+  color: #555;
+}
+
+/* ============================= */
+/* RESPONSIVE — TABLET (900px) */
+/* ============================= */
+@media (max-width: 900px) {
+
+  .section-wrapper {
+    flex-direction: column;
+    text-align: start;
+    padding: 20px 0px;
+    gap: 10px;
+    margin: -10px auto;
+  }
+img.section-img {
+    width: 75%;
+    margin-left: 10px;
+}
+  .plumbing-image-box,
+  .plumbing-content,s
+  .service-image-box,
+  .service-content {
+    width: 100%;
+  }
+
+  .dots {
+    display: none;
+  }
+}
+
+/* ============================= */
+/* RESPONSIVE — MOBILE (600px) */
+/* ============================= */
+@media (max-width: 600px) {
+
+  .section-title {
+    font-size: 22px;
+  }
+
+  .section-text {
+    font-size: 16px;
+  }
+
+  .section-wrapper {
+    padding: 20px 0px;
+  }
+}
+.loot
+{
+  top: 160px;
+  position: relative;
+}
+/* ============================= */
+/* SMALL MOBILE (480px) */
+/* ============================= */
+@media (max-width: 480px) {
+  .section-title {
+        font-size: 24px;
+        font-weight: 400;  }
+
+  .section-text {
+    font-size: 16px;
+  }
+}
+/* ============================= */
+/* button section */
+/* ============================= */
+.button-row {
+  display: flex;
+  gap: 1rem;
+  justify-content: start;
+  align-items: center;
+  margin-top: 25px;
+  flex-wrap: wrap;
+  font-family: 'Plus Jakarta Sans', sans-serif;
+}
+
+/* Base Button */
+.primary-btn,
+.secondary-btn {
+  position: relative;
+  overflow: hidden;
+  display: inline-block;
+  text-decoration: none;
+  padding: 15px 20px;
+  font-weight: 600;
+  border-radius: 4px;
+  transition: 0.25s ease;
+  color: #ffffff;
+  background-color: #0F8E49;
+}
+
+/* 🔥 Shine Effect (for both buttons) */
+.primary-btn::after,
+.secondary-btn::after {
+  content: "";
+  position: absolute;
+  top: 0;
+  left: -120%;
+  width: 60%;
+  height: 100%;
+  background: rgba(255, 255, 255, 0.45);
+  transform: skewX(-25deg);
+  transition: left 0.55s ease;
+}
+
+/* Shine movement on hover */
+.primary-btn:hover::after,
+.secondary-btn:hover::after {
+  left: 120%;
+}
+
+/* Primary Hover */
+.primary-btn:hover {
+  background-color: #0F8E49;
+}
+
+/* Secondary Hover */
+.secondary-btn:hover {
+  background-color: #0F8E49;
+  color: rgb(255, 255, 255);
+}
+
+/* Responsive */
+@media (max-width: 480px) {
+  .button-row {
+    flex-direction: column;
+    gap: 0.8rem;
+  }
+
+  .primary-btn,
+  .secondary-btn {
+    text-align: center;
+  }
+}
+
+/* ============================= */
+/* point section section */
+/* ============================= */
+
+  /* Wrapper — max 1200px, centered */
+.two-column-wrapper {
+  max-width: 1200px;
+  margin: 40px auto;
+  display: flex;
+  justify-content: space-between;
+  gap: 40px;
+  position: relative;
+  padding: 10px;
+  font-family: 'Plus Jakarta Sans', sans-serif;
+}
+
+/* Each column */
+.column-box {
+  width: 50%;
+}
+
+/* Divider */
+.vertical-divider {
+    width: 1px;
+    background: #00000021;
+    flex-shrink: 0;
+}
+
+/* Titles */
+.column-title {
+    font-size: 19px;
+    font-weight: 600;
+    margin-bottom: 20px;
+    color: #222;
+}
+
+/* List styling */
+.column-list {
+  list-style-type: disc;
+  padding-left: 5px;
+  color: #444;
+  line-height: 1.6;
+  margin: 0;
+}
+
+.column-list li {
+    font-size: 16px;
+    margin-bottom: 15px;
+}
+
+/* Responsive — stack columns on mobile */
+@media (max-width: 768px) {
+  .two-column-wrapper 
+  {
+    flex-direction: column;
+    gap: 15px;
+    padding: 10px;
+    
+  }
+
+  .vertical-divider {
+    display: none; /* hide divider on mobile */
+  }
+
+  .column-box {
+    width: 100%;
+  }
+}
+.column-list li:before {
+    content: "✔";
+    color: #fff;
+    font-weight: 700;
+    position: absolute;
+    left: 3px;
+    top: 15px;
+    transform: translateY(-65%);
+    background-color: #00a859;
+    width: 15px;
+    height: 15px;
+    border-radius: 50%;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    font-size: 8px;
+}
+/* Make column-list relative for absolute pseudo elements */
+.column-list {
+  list-style: none; /* remove default bullets */
+  margin: 0;
+  color: #444;
+  line-height: 1.6;
+  position: relative;
+}
+
+.column-list li {
+  margin-bottom: 12px;
+  position: relative; /* required for pseudo element positioning */
+  padding-left: 30px; /* space for checkmark */
+}

@@ -1,0 +1,76 @@
+---
+import blogs from "../../../data/blogs.json";
+import Layout from "../../../layouts/Layout.astro";
+
+const pageParam = Astro.params.page ?? "1";
+const currentPage = Number.parseInt(pageParam, 10);
+
+const postsPerPage = 10;
+const totalPosts = blogs.length;
+const totalPages = Math.ceil(totalPosts / postsPerPage);
+
+if (currentPage < 1 || currentPage > totalPages) {
+  return new Response("Page not found", { status: 404 });
+}
+
+// Newest first, matching the /blogs index ordering
+const sortedBlogs = [...blogs].sort(
+  (a, b) => new Date(b.date).getTime() - new Date(a.date).getTime()
+);
+
+const start = (currentPage - 1) * postsPerPage;
+const end = start + postsPerPage;
+const paginatedBlogs = sortedBlogs.slice(start, end);
+
+const prevPage = currentPage > 1
+  ? currentPage === 2
+    ? "/blogs"
+    : `/blogs/page/${currentPage - 1}`
+  : null;
+
+const nextPage = currentPage < totalPages
+  ? `/blogs/page/${currentPage + 1}`
+  : null;
+
+const pageNumbers = Array.from({ length: totalPages }, (_, i) => i + 1);
+---
+
+<Layout title={`Blogs - Page ${currentPage}`} description="Latest blog posts with pagination">
+  <section class="pt-0">
+    <div class="container">
+      <div class="row">
+        <div class="data">
+          <h1 data-aos="fade-up" data-aos-delay="100">Blogs</h1>
+
+          <ul class="grid grid-two all-blogs">
+            {paginatedBlogs.map((blog) => (
+              <li data-aos="fade-up" data-aos-delay="100">
+                <a href={`/blogs/${blog.slug}`}>
+                  <img src={blog.image} alt={blog.title} width="200" />
+                  <h2>{blog.title}</h2>
+                </a>
+              </li>
+            ))}
+          </ul>
+
+          <div class="pagination">
+            {prevPage && <a href={prevPage} class="page-btn">« Prev</a>}
+            {pageNumbers.map((num) => (
+              <a 
+                href={num === 1 ? '/blogs' : `/blogs/page/${num}`} 
+                class={`page-number ${num === currentPage ? 'active' : ''}`}>
+                {num}
+              </a>
+            ))}
+            {nextPage && <a href={nextPage} class="page-btn">Next »</a>}
+          </div>
+        </div>
+
+      
+      </div>
+    </div>
+  </section>
+  <style>
+   
+  </style>
+</Layout>

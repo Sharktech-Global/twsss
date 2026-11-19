@@ -1,0 +1,158 @@
+/* 🌿 Main Section */
+.services-section {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  padding:40px 0;
+  background: #fff;
+  position: relative;
+  max-width: 1400px;
+  overflow: hidden;
+  margin: 0 auto;
+}
+.services-left.aos-init.aos-animate h2 {
+    color: #0e8641 !important;
+}
+/* 🌿 Container Layout */
+.services-section .container {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  gap: 40px;
+  width: 90%;
+  max-width: 1400px;
+}
+
+/* 🌿 Left Title Block (20% width) */
+.section-title {
+  flex: 0 0 20%;
+  font-weight: 600;
+  line-height: 1.2;
+  color: #222;
+  position: relative;
+  z-index: 2;
+}
+.slide-data1 {
+  text-decoration: none !important;
+  color: inherit;
+  display: block;
+}
+
+.slide-data1 p {
+  text-decoration: none !important;
+}
+
+.section-title span {
+  display: block;
+}
+
+/* 🌿 Button under title */
+.services-btn {
+  display: inline-block;
+  background-color: #0d875c;
+  color: #fff;
+  text-decoration: none;
+  font-weight: 600;
+  font-size: 15px;
+  padding: 12px 28px;
+  border-radius: 6px;
+  transition: all 0.3s ease;
+}
+
+.services-btn:hover {
+  background-color: #0b5c2d;
+  transform: translateY(-2px);
+}
+
+/* 🌿 Right Carousel Block (80%) */
+.services-carousel {
+  flex: 1;
+  position: relative;
+  width: 76%;
+  z-index: 2;
+}
+
+/* 🌿 Individual Service Cards */
+.slide-data1 {
+  background: #fff;
+  border-radius: 16px;
+  text-align: center;
+  padding: 25px 10px;
+  transition: all 0.3s ease;
+  cursor: pointer;
+}
+
+.slide-data1 img {
+  width: 100%;
+  max-width: 176px;
+  height: auto;
+  margin: 0 auto 15px;
+  transition: transform 0.4s ease;
+  display: flex;
+  justify-content: center;
+}
+
+.slide-data1 p {
+  font-size: 14px;
+  color: #333;
+  font-weight: 500;
+  margin: 0;
+  display: flex;
+  justify-content: center;
+}
+
+.slide-data1:hover img {
+  transform: scale(1.08);
+}
+
+/* -------------------------- */
+/* 📱 RESPONSIVE MEDIA QUERIES */
+/* -------------------------- */
+@media (max-width: 1024px) {
+  
+
+  .section-title {
+    flex: unset;
+    width: 100%;
+    font-size: 2.4rem;
+  }
+
+  .services-carousel {
+    width: 100%;
+  }
+}
+
+@media (max-width: 768px) {
+  .section-title {
+    font-size: 2rem;
+  }
+
+  .slide-data1 {
+    padding: 18px 10px;
+  }
+
+  .slide-data1 img {
+    max-width: 100px;
+  }
+
+  .slide-data1 p {
+    font-size: 0.9rem;
+  }
+}
+
+@media (max-width: 480px) {
+  .section-title {
+    font-size: 1.8rem;
+    color: #028343 !important;
+  }
+.services-section {
+  
+    padding: 21px 0;}
+  .slide-data1 img {
+        max-width: 140px;
+        border-radius: 10px;  }
+
+  .slide-data1 p {
+    font-size: 0.85rem;
+  }
+}

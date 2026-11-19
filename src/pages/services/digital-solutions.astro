@@ -1,0 +1,156 @@
+---
+import Layout from "../../layouts/Layout.astro";
+import "../../styles/digital-solution.css"
+import "aos/dist/aos.css";
+const currentYear = new Date().getFullYear();
+import { getSEO } from "../../utils/getSEO";
+const seo = getSEO("digital-solutions");
+---
+
+<Layout title={seo.title} description={seo.description} keywords={seo.keywords}>
+    <section>
+<div class="inner-banner">
+  <div class="inner-banner-content">
+    <h1>Services</h1>
+    <p>Home / Services</p>
+  </div>
+  </div>
+</section>
+  <!-- ============================= -->
+  <!-- 1) PLUMBING SERVICES (Left Image) -->
+  <!-- ============================= -->
+<section class="services-section">
+
+  <div class="section-wrapper plumbing-wrapper" id="irrigation-services">
+
+    <!-- IMAGE -->
+    <div class="plumbing-image-box">
+      <div class="dots"></div>
+      <img src="/servicesimages/digital-solution.png" class="section-img" alt="Irrigation Services
+" data-aos="fade-right">
+    </div>
+
+    <!-- TEXT -->
+    <div class="plumbing-content">
+      <h2   class="section-title section-title reveal-letters">
+Digital Solutions by TWSSS
+</h2>
+      <p   class="section-text" data-aos="fade-up">
+    At TWSSS, we’re expanding our footprint beyond water and sanitation to deliver essential digital services that drive innovation, 
+    sustainability, and community impact. Our goal is to empower organisations with powerful tools that enhance visibility, engagement, 
+    and service delivery across sectors.
+      </p>
+    </div>
+
+  </div>
+</section>
+
+
+<section class="faq-wrapper">
+  <div class="faq-section">
+    <div class="faq-item active">
+      <button class="faq-question" aria-expanded="true">
+        1. Website & Mobile App Development
+        <span class="arrow">↑</span>
+      </button>
+      <div class="faq-answer" style="max-height: none;">
+        <p>
+          We create custom-built websites and mobile applications tailored to your organisation’s needs — whether for public engagement, internal management, or service delivery. Every solution is designed with performance, accessibility, and user experience in mind.
+        </p>
+        <p class="offerings-title">OUR OFFERINGS INCLUDE:</p>
+        <ul>
+          <li>Informational & CSR Websites</li>
+          <li>NGO & Community Portals</li>
+          <li>Mobile Apps for Any Needs</li>
+          <li>Online Service Request Platforms</li>
+          <li>Real-time Dashboards & Reporting Tools</li>
+          <li>Donor & Volunteer Engagement Portals</li>
+        </ul>
+      </div>
+    </div>
+
+    <div class="faq-item">
+      <button class="faq-question" aria-expanded="false">
+        2. Digital Branding & Design
+        <span class="arrow">↓</span>
+      </button>
+      <div class="faq-answer">
+        <p>
+          A strong digital identity builds trust, recognition, and connection. We help you craft a cohesive visual presence that communicates your values and sets you apart — all while keeping it human and accessible.
+        </p>
+        <p class="offerings-title"><strong>OUR OFFERINGS INCLUDE:</strong></p>
+        <ul>
+          <li>Logo Design & Brand Guidelines</li>
+          <li>UI/UX Design for Web & Apps</li>
+          <li>Social Media Kit & Templates</li>
+          <li>Digital Flyers & Campaign Collateral</li>
+          <li>Infographics & Impact Reports</li>
+          <li>Presentation Decks & Pitch Materials</li>
+        </ul>
+      </div>
+    </div>
+
+    <div class="faq-item">
+      <button class="faq-question" aria-expanded="false">
+        3. Digital Marketing & Strategy
+        <span class="arrow">↓</span>
+      </button>
+      <div class="faq-answer">
+        <p>
+  Reach your audience effectively and tell your story with clarity. Our digital marketing strategies help you grow awareness, increase participation, and strengthen your online presence.
+</p>
+
+<p class="offerings-title"><strong>OUR OFFERINGS INCLUDE:</strong></p>
+
+<ul>
+  <li>SEO & Content Optimisation</li>
+  <li>Email Marketing & Automation</li>
+  <li>Blog Strategy & Content Creation</li>
+  <li>Campaign Analytics & Reporting</li>
+  <li>Community Engagement Strategies</li>
+</ul>
+      </div>
+    </div>
+  </div>
+</section>
+<div class="center-section">
+    <p class="top-text">
+        At TWSSS, we believe digital transformation should be 
+        <strong>purpose–driven</strong> and accessible. We’re here to ensure that your 
+        message, mission, and services reach the people who matter most — effectively 
+        and meaningfully.
+    </p>
+
+    <div class="bottom-text">
+        <p><strong>Interested in a digital partnership that makes an impact?</strong></p>
+        <p>Let’s build something meaningful together. <strong>Contact us today.</strong></p>
+    </div>
+</div>
+
+<script is:inline>
+document.querySelectorAll('.faq-question').forEach(button => {
+  button.addEventListener('click', () => {
+    const faqItem = button.parentElement;
+    const answer = button.nextElementSibling;
+
+    // If clicked FAQ is already active, do nothing
+    if (faqItem.classList.contains('active')) return;
+
+    // Close all FAQ items
+    document.querySelectorAll('.faq-item').forEach(item => {
+      item.classList.remove('active');
+      item.querySelector('.faq-question').setAttribute('aria-expanded', 'false');
+      item.querySelector('.arrow').style.transform = 'rotate(0deg)';
+      item.querySelector('.faq-answer').style.maxHeight = null;
+    });
+
+    // Open clicked FAQ
+    faqItem.classList.add('active');
+    button.setAttribute('aria-expanded', 'true');
+    button.querySelector('.arrow').style.transform = 'rotate(180deg)';
+    answer.style.maxHeight = answer.scrollHeight + 'px';
+  });
+});
+
+</script>
+</Layout>

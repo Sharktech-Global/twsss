@@ -1,0 +1,113 @@
+---
+import Layout from "../layouts/Layout.astro";
+import "../styles/tahmoor.css"
+import "aos/dist/aos.css";
+import waterImage from "../../public/servicesimages/tadmoor.png";
+import { Image } from "astro:assets";
+const currentYear = new Date().getFullYear();
+import { getSEO } from "../utils/getSEO";
+const seo = getSEO("irrigear-tahmoo");
+---
+
+<Layout title={seo.title} description={seo.description} keywords={seo.keywords}>
+
+    <section>
+<div class="inner-banner">
+  <div class="inner-banner-content">
+    <h1>Irrigear Tahmoor – Your Water Management Experts</h1>
+
+  </div>
+  </div>
+</section>
+  <!-- ============================= -->
+  <!-- 1) PLUMBING SERVICES (Left Image) -->
+  <!-- ============================= -->
+<section class="services-section">
+
+  <div class="section-wrapper plumbing-wrapper" id="irrigation-services">
+
+    <!-- IMAGE -->
+    <div class="plumbing-image-box">
+      <div class="dots"></div>
+
+<Image 
+  src={waterImage} 
+  alt="Water Generator" 
+  class="section-img" 
+  data-aos="fade-right"
+/>
+    </div>
+
+    <!-- TEXT -->
+    <div class="plumbing-content">
+      <h2   class="section-title section-title reveal-letters">
+
+Irrigear Tahmoor – Your<br>
+Water Management Experts
+</h2>
+      <p   class="section-text" data-aos="fade-up">
+    We deliver expert plumbing solutions, including system diagnostics, regular inspections, faucet and fixture 
+    repairs, pipe maintenance, water quality testing, valve and pressure optimization, pump upgrades, and backflow 
+    prevention. Our services also include water main construction, providing reliable installations and repairs 
+    for sustainable water supply systems. Additionally, we offer compliance consulting and proactive strategies
+     to ensure peak performance and long-term reliability.
+      </p>
+      
+  </div>
+    </div>
+
+</section>
+<div class="center-content">
+  <h2 class="section-heading">Retail & Trade Supply – Everything You Need for Water Management</h2>
+
+  <p class="section-subcontent">
+    At Irrigear Tahmoor, we don’t just provide expert advice and services—we also offer a 
+    comprehensive retail experience, supplying a vast range of high-quality products for homeowners, 
+    farmers, businesses, and trade professionals.
+  </p>
+</div>
+
+<div class="two-column-wrapper">
+  
+  <!-- LEFT COLUMN -->
+<div class="column-box">
+  <h3 class="column-title">Our store stocks over 2.5 million water-related products, including:</h3>
+
+  <ul class="column-list">
+    <li>Pipes, fittings, and valves for irrigation, plumbing, and industrial applications.</li>
+    <li>Pumps for household, pool, bore, commercial, and agricultural use, with in-store testing and repairs available.</li>
+    <li>Filtration and water treatment systems to ensure safe, clean, and efficient water use.</li>
+    <li>Water storage solutions, including tanks, troughs, and accessories.</li>
+    <li>Hoses, sprinklers, and irrigation supplies for DIY installations or professional setups.</li>
+    <li>Dust suppression and erosion control products to support construction and landscaping projects.</li>
+  </ul>
+  <p>Whether you're looking for a small replacement part, a complete water system solution, or expert advice on the best products for your needs, our team is here to help.</p>
+</div>
+
+  <!-- DIVIDER -->
+  <div class="vertical-divider"></div>
+
+<div class="column-box">
+  <h3 class="column-title">Our Expert Services Include</h3>
+
+  <ul class="column-list">
+    <li>Irrigation Solutions – Custom-designed systems for residential gardens, commercial landscapes, and agricultural applications.</li>
+    <li>Dust Suppression – Effective dust control solutions for work sites and construction periods.</li>
+    <li>Water Treatment and Testing – Water quality analysis and tailored filtration systems for residential and commercial use.</li>
+    <li>Pump Services – Supply, installation, testing, and repairs for all types of pumps.</li>
+  </ul>
+
+  <p>At Irrigear Tahmoor, we pride ourselves on offering quality products, expert service, and tailored solutions to meet all your water management needs. Our commitment to ISO 9001 standards and Workplace Health & Safety best practices ensures that every solution we provide is reliable and built to last.</p>
+</div>
+</div>
+<div class="center-content">
+  <h2 class="section-heading">Visit Us Today</h2>
+
+  <p class="section-subcontent">
+    Whether you're a homeowner, farmer, contractor, or business owner, Irrigear Tahmoor has the knowledge, products, 
+    and services to help you achieve efficient, sustainable, and cost-effective water management.
+  </p>
+<a href="#" class="ghl-btn-gradient">Visit Our Site</a>
+
+</div>
+</Layout>

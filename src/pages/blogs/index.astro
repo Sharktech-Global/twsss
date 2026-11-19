@@ -1,0 +1,222 @@
+---
+import blogs from "../../data/blogs.json";
+import Layout from "../../layouts/Layout.astro";
+import { getSEO } from "../../utils/getSEO";
+const seo = getSEO("blog");
+
+// Featured posts lead the list in their pinned order, then everything
+// else by date, newest first.
+const sortedBlogs = [...blogs].sort((a, b) => {
+  const aRank = a.featured ?? Infinity;
+  const bRank = b.featured ?? Infinity;
+  if (aRank !== bRank) return aRank - bRank;
+  return new Date(b.date).getTime() - new Date(a.date).getTime();
+});
+
+// Every post is listed on this single page, so there is no pagination
+const paginatedBlogs = sortedBlogs;
+---
+
+<Layout title={seo.title} description={seo.description} keywords={seo.keywords}>
+
+<section class="inner-banner">
+    <div class="inner-banner-content"><h1>Blogs</h1></div>
+  </section>
+
+  <!-- Keep ONLY if Soro is your blog source -->
+  <section>
+    <div id="soro-blog"></div>
+    <script src="https://app.trysoro.com/api/embed/f5e2d18f-be4b-4124-acbc-cd7e3849f1b1" defer></script>
+  </section>
+
+
+
+<section class="blogs-section">
+
+  <div class="container blogs-wrapper">
+
+    <ul class="blogs-grid">
+      {paginatedBlogs.map((blog) => (
+        <li class="blog-card" data-aos="fade-up" data-aos-delay="100">
+          <a href={`/blogs/${blog.slug}`}>
+
+            <div class="blog-image">
+              <img
+                src={blog.image && blog.image.trim() !== "" ? blog.image : "/placeholder.jpg"}
+                alt={blog.title}
+                loading="lazy"
+              />
+            </div>
+
+            <h2 class="blog-title">{blog.title}</h2>
+
+            <p class="blog-des">{blog.des}</p>
+
+            <div class="readmore">
+              <span>Read More</span>
+              <span class="arrow">➜</span>
+            </div>
+
+          </a>
+        </li>
+      ))}
+    </ul>
+
+  </div>
+</section>
+
+<style>
+:root {
+  /* FONT FAMILY */
+  --font-heading: "Plus Jakarta Sans", sans-serif;
+  --font-content: "Plus Jakarta Sans", sans-serif;
+
+}
+body {
+    margin: 0;
+    font-family: var(--font-heading) !important;
+   
+}
+.inner-banner {
+  width: 100%;
+  height: 350px;
+  background: 
+    linear-gradient(rgba(0, 0, 0, 0.45), rgba(0, 0, 0, 0.45)),
+    url(../../assets/join-team/subcon-1.png);
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  text-align: center;
+      background-size: cover;
+    background-repeat: no-repeat;
+    background-attachment: fixed;
+    background-position: center 0px;
+}
+
+.inner-banner-content h1 {
+  color: #fff;
+  font-size: 48px;
+  font-weight: 700;
+  margin: 0;
+}
+
+.inner-banner-content p {
+  color: #e5e5e5;
+  font-size: 18px;
+  margin-top: 10px;
+}
+@media (max-width: 768px) {
+  .inner-banner {
+    height: 220px;
+  }
+
+  .inner-banner-content h1 {
+    font-size: 25px;
+  }
+
+  .inner-banner-content p {
+    font-size: 15px;
+  }
+}
+
+
+
+
+
+
+/* SECTION */
+.blogs-section {
+  padding: 80px 30px;
+}
+
+/* WRAPPER */
+.blogs-wrapper {
+  max-width: 1200px;
+  margin: 0 auto;
+}
+
+/* GRID */
+.blogs-grid {
+  display: grid;
+  grid-template-columns: repeat(3, 1fr);
+  gap: 40px;
+
+  /* Remove list markers completely */
+  list-style: none;
+  margin: 0;
+  padding: 0;
+}
+
+/* CARD */
+.blog-card {
+  background: #fff;
+  border-radius: 10px;
+  transition: all .3s ease;
+}
+
+.blog-card a {
+  display: block;
+  text-decoration: none;
+  color: inherit;
+}
+
+/* IMAGE */
+.blog-image img {
+  width: 100%;
+  height: 240px;
+  object-fit: cover;
+  border-radius: 8px;
+}
+
+/* TITLE */
+.blog-title {
+  font-size: 18px;
+  margin-top: 15px;
+  margin-bottom: 10px;
+  color: #1d4328;
+  font-weight: 600;
+}
+
+/* DESCRIPTION */
+.blog-des {
+  color: #555;
+  font-size: 15px;
+  line-height: 1.6;
+  height: 55px;
+  overflow: hidden;
+}
+
+/* READ MORE */
+.readmore {
+  margin-top: 15px;
+  display: flex;
+  align-items: center;
+  gap: 10px;
+  font-weight: 600;
+  color: #0f7b47;
+}
+
+.readmore .arrow {
+  background: #0f7b47;
+  color: #fff;
+  padding: 6px 8px;
+  border-radius: 50%;
+  font-size: 14px;
+}
+
+/* RESPONSIVE */
+@media (max-width: 1100px) {
+  .blogs-grid {
+    grid-template-columns: repeat(2, 1fr);
+    gap: 30px;
+  }
+}
+
+@media (max-width: 768px) {
+  .blogs-grid {
+    grid-template-columns: repeat(1, 1fr);
+  }
+}
+</style>
+</Layout>
+

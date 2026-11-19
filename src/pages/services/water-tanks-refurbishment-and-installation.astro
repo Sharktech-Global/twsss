@@ -1,0 +1,91 @@
+---
+import Layout from "../../layouts/Layout.astro";
+import "../../styles/water-tank.css"
+import "aos/dist/aos.css";
+const currentYear = new Date().getFullYear();
+import { getSEO } from "../../utils/getSEO";
+const seo = getSEO("water-tanks-service");
+---
+
+<Layout title={seo.title} description={seo.description} keywords={seo.keywords}>
+    <section>
+<div class="inner-banner">
+  <div class="inner-banner-content">
+    <h1>Services</h1>
+    <p>Home / Services</p>
+  </div>
+  </div>
+</section>
+  <!-- ============================= -->
+  <!-- 1) PLUMBING SERVICES (Left Image) -->
+  <!-- ============================= -->
+<section class="services-section">
+
+  <div class="section-wrapper plumbing-wrapper" id="irrigation-services">
+
+    <!-- IMAGE -->
+    <div class="plumbing-image-box">
+      <div class="dots"></div>
+      <img src="/servicesimages/imgi_3_plumbing-services.png" class="section-img" alt="Irrigation Services
+" data-aos="fade-right">
+    </div>
+
+    <!-- TEXT -->
+    <div class="plumbing-content">
+      <h2   class="section-title section-title reveal-letters">Water Tanks <br>Refurbishment/Installation
+</h2>
+      <p   class="section-text" data-aos="fade-up">
+At TWS, we deliver comprehensive water tank solutions tailored to meet the demands of both domestic and commercial environments. 
+Our services cover thefull lifecycle of water tanks—specialising in the refurbishment, installation, and scheduled maintenance of 
+drinking water supply tanks and fire water storage systems.
+
+      </p>
+    </div>
+
+  </div>
+</section>
+<section class="service-detail">
+  <div class="image-container">
+    <img src="/servicesimages/water-tank.png" alt="Water Tanks Overview" />
+  </div>
+
+  <div class="text-content">
+    <p>
+          With over 15 years of experience, our team is equipped to manage projects from initial consultation through 
+          to final installation, ensuring every tank meets orexceeds Australian standards. Whether for potable water or fire suppression systems,
+          we focus on functionality, compliance, and longevity. Our work is carriedout with a high level of precision, efficiency, and care.
+    </p>
+
+    <h3>Our Services Include:</h3>
+
+    <ul>
+      <li>Refurbishment of aging or non-compliant tanks.</li>
+      <li>Installation of new drinking water and fire tanks.</li>
+      <li>Internal and external waterproofing.</li>
+      <li>Roof replacement or upgrades.</li>
+      <li>Internal cleaning, desludging, and disinfection.</li>
+      <li>Vermin-proofing at critical access and base points.</li>
+      <li>Replacement of damaged valves, floats, and access ports.</li>
+      <li>Repositioning of manholes for safer access.</li>
+      <li>Rust and corrosion treatment.</li>
+    </ul>
+
+    <p>
+We understand the operational and safety risks posed by poorly maintained tanks. 
+That’s why we offer ongoing scheduled maintenance programs for bothdomestic supply tanks and fire tanks, 
+structured in line with AS 1851-2012 standards.These programs include routine inspections, compliance reporting,internal and external cleaning, component testing, and system optimisation to ensure your infrastructure remains reliable and fully operational year-round.
+    <p>
+What sets us apart is our commitment to sustainability, long-term value, and complete in-house delivery.
+ We don’t subcontract critical tasks—our skilled teamhandles everything from confined space entry and high-risk work to water testing, 
+ waste disposal, and detailed reporting. We also assist with projectdocumentation, site risk assessments, and service reports that align with your asset management systems.
+    </p>
+
+    <p>
+Whether you need a single tank inspected or a complete site-wide refurbishment and maintenance strategy, 
+TWS delivers reliable, high-quality watermanagement solutions designed to perform for years to come.    </p>
+    </p>
+  </div>
+</section>
+
+
+</Layout>

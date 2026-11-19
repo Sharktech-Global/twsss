@@ -1,0 +1,98 @@
+---
+import Layout from "../../layouts/Layout.astro";
+import "../../styles/irrigation-and-dust.css"
+import "aos/dist/aos.css";
+const currentYear = new Date().getFullYear();
+import { getSEO } from "../../utils/getSEO";
+const seo = getSEO("irrigation-service");
+---
+
+<Layout title={seo.title} description={seo.description} keywords={seo.keywords}>
+    <section>
+<div class="inner-banner">
+  <div class="inner-banner-content">
+    <h1>Services</h1>
+    <p>Home / Services</p>
+  </div>
+  </div>
+</section>
+
+
+  <!-- ============================= -->
+  <!-- 1) PLUMBING SERVICES (Left Image) -->
+  <!-- ============================= -->
+<section class="services-section">
+
+  <div class="section-wrapper plumbing-wrapper" id="irrigation-services">
+
+    <!-- IMAGE -->
+    <div class="plumbing-image-box">
+      <div class="dots"></div>
+      <img src="/irrigation-and-dust/irrigation-services.png" class="section-img" alt="Irrigation Services
+" data-aos="fade-right">
+    </div>
+
+    <!-- TEXT -->
+    <div class="plumbing-content">
+      <h2   class="section-title section-title reveal-letters">Irrigation Services
+</h2>
+      <p   class="section-text" data-aos="fade-up">
+      We offer comprehensive irrigation services for both residential and commercial sectors. Our team is skilled in designing and installing irrigation systems that cater to a variety of needs, ensuring efficient water usage and optimal results.
+      </p>
+    </div>
+
+  </div>
+
+  <!-- ============================= -->
+  <!-- 2) COOLING TOWER REPAIRS (Right Image) -->
+  <!-- ============================= -->
+  <div class="section-wrapper right-image-wrapper" id="dust-supression-services" >
+
+    <!-- IMAGE -->
+    <div class="service-image-box">
+      <div class="dots"></div>
+      <img src="/irrigation-and-dust/dust-supress-services.png" class="section-img" alt="Dust Suppression Services
+" data-aos="fade-right">
+    </div>
+
+    <!-- TEXT -->
+    <div class="service-content">
+      <h2   class="section-title section-title reveal-letters">Dust Suppression Services
+</h2>
+      <p class="section-text" data-aos="fade-up">
+   At Irrigear Tahmoor, we specialize in designing and installing dust suppression systems specifically
+    tailored for work sites and construction periods. Our systems effectively manage dust, helping you comply with environmental
+     regulations and improve air quality during construction activities. We provide services from design through to installation, 
+     commissioning, and ongoing servicing.
+</p>
+    </div>
+
+  </div>
+
+ <div class="section-wrapper plumbing-wrapper" id="commerical-irrigation">
+
+    <!-- IMAGE -->
+    <div class="plumbing-image-box">
+      <div class="dots"></div>
+      <img src="/irrigation-and-dust/commerical-irrigation.png" class="section-img" alt="Commercial Irrigation" data-aos="fade-right">
+    </div>
+
+    <!-- TEXT -->
+    <div class="plumbing-content">
+      <h2  class="section-title section-title reveal-letters">Commercial Irrigation</h2>
+      <p class="section-text" data-aos="fade-up">
+We excel in designing and installing irrigation systems for commercial applications, no matter the scale. 
+Our expertise ensures that your business receives a customized solution that meets your unique water management requirements, 
+with full support from design and installation to commissioning and servicing.
+     </p>
+    </div>
+
+  </div>
+
+ 
+
+</section>
+
+
+
+</Layout>

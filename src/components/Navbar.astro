@@ -1,0 +1,1490 @@
+---
+import { FaPhoneVolume } from "react-icons/fa";
+import { BsInstagram } from "react-icons/bs";
+import { MdKeyboardArrowDown } from "react-icons/md";
+import { BiLogoFacebook } from "react-icons/bi";
+import { SiLinkedin } from "react-icons/si";
+import { PiDotsThreeOutlineVerticalDuotone } from "react-icons/pi";
+import { IoCloseOutline } from "react-icons/io5";
+
+// Navigation structure
+const navLinks = [
+  { label: "Home", href: "/" },
+  { label: "About Us", href: "/about-us" },
+  {
+    label: "Services",
+    href: "/services/integrated-maintenance-services",
+    dropdown: [
+      {
+        label: "Integrated Maintenance Services",
+        href: "/services/integrated-maintenance-services",
+        nested: [
+          { label: "Plumbing Services", href: "/services/integrated-maintenance-services" },
+          { label: "Fire Services", href: "/services/integrated-maintenance-services#fire-services", target: "_self" },
+          { label: "Skyrise Protect: High-Rise Rooftop Sealing", href: "/services/integrated-maintenance-services#skyrise-protect" },
+          { label: "Capital Project (CapEx) Upgrades", href: "/services/integrated-maintenance-services#capital-project" },
+          { label: "Landscape Installation & Repairs", href: "/services/integrated-maintenance-services#landscape-installation-and-repairs" },
+          { label: "Fabrication Services", href: "/services/integrated-maintenance-services#fabrication-services" },
+          { label: "Cooling Tower Repairs", href: "/services/integrated-maintenance-services#cooling-tower-repairs" },
+          { label: "Electrical Services", href: "/services/integrated-maintenance-services#electrical-services" },
+          { label: "Handyman Services", href: "/services/integrated-maintenance-services#handyman-services" },
+          { label: "Road & Driveway Repairs", href: "/services/integrated-maintenance-services#road-driveway-repairs" },
+          {label:"Rooftop Waterproofing Services",href:"/services/integrated-maintenance-services#rooftop-waterproofing"},
+          {label:"Commercial Metal Roofing",href:"/services/integrated-maintenance-services#commerical-metal-roofing"},
+                    { label: "Water Treatment System Design, Installation, and Servicing", href: "/services/integrated-maintenance-services#water-treatment-system-design-installation-and-services " },
+          {label:"Commercial Flower Grower",href:"/services/integrated-maintenance-services#commercial-flower-grower"},
+          // { label: "Commercial Metal Roofing Replacement and Upgrading", href: "/services/integrated-maintenance-services#commerical-metal-roofing" },
+        ]
+      },
+      { 
+        label: "Irrigation and Dust Suppression System", 
+        href: "/services/irrigation-and-dust-suppression-system",
+        nested: [
+          { label: "Irrigation Services", href: "/services/irrigation-and-dust-suppression-system" },
+          { label: "Dust Suppression Services", href: "/services/irrigation-and-dust-suppression-system#dust-supression-services" },
+          { label: "Commercial Irrigation", href: "/services/irrigation-and-dust-suppression-system#commerical-irrigation" }
+        ]
+      },
+      { label: "Water Tanks Refurbishment / Installation", href: "/services/water-tanks-refurbishment-and-installation"},
+      
+      { label: "Passive Fire Services", href: "/services/passive-fire-services" }
+    ]
+  },
+  {
+    label: "Products",
+    href: "/american-road-patch",
+    dropdown: [
+      { label: "American Road Patch", href: "/american-road-patch" },
+      { label: "Water Generators", href: "/water-generators" },
+      { label: "Skyrise Protect", href: "/skyrise-protect" },
+      { label: "Irrigear Tahmoor", href: "/irrigear-tahmoor" },
+    ]
+  },
+  { label: "Projects", href: "/projects" },
+];
+
+const capabilityDropdown = [
+  {     label: "Facility Maintenance Capability Statement",
+    href: "/TWS-Capability-Statement.pdf",
+    target: "_blank" },
+  { label: "Capital Work Capability Statement", href: "/capital_work.pdf",  target: "_blank" },
+  { label: "Fire-Protection Capability Statement", href: "/services/fire-protection-capability" },
+];
+
+const joinTeamDropdown = [
+  { label: "Subcontractors Application", href: "/subcontractor-application" },
+  { label: "Employee Application", href: "/employee-application" },
+  { label: "Personnel Onboarding", href: "/personnel-onboarding" },
+];
+
+const rightPanelLinks = [
+  { label: "Blogs", href: "/blogs" },
+  { label: "Contact Us", href: "/contact" },
+];
+---
+
+<!-- Top Bar -->
+<div class="topbar">
+<div class="top21">
+  <div class="topbar-left">
+    <a href="https://www.instagram.com/twsserviceandsolutions" target="_blank" aria-label="Instagram"><BsInstagram aria-hidden="true" /></a>
+    <a href="https://www.linkedin.com/company/tws-service-and-solutions" target="_blank" aria-label="LinkedIn"><SiLinkedin aria-hidden="true" /></a>
+    <a href="https://www.facebook.com/twsserviceandsolutions" target="_blank" aria-label="Facebook"><BiLogoFacebook aria-hidden="true" /></a>
+  </div>
+  <div class="topbar-right">
+    <a href="tel:+611300782252" class="contact-phone">
+  <FaPhoneVolume />
+  <span>+61 1300 78 22 52</span>
+</a>
+
+  </div>
+  </div>
+</div>
+
+<!-- Main Navbar -->
+<header class="navbar">
+  <div class="navbar-container">
+    <!-- Logo -->
+    <div class="logo">
+      <a href="/">
+        <img src="/Home-images/imgi_1_imgi_2_logo.webp" alt="TWS Logo" width="150" height="42" />
+      </a>
+    </div>
+
+    <!-- Desktop Navigation -->
+    <nav class="nav-desktop" id="navDesktop">
+      {navLinks.map((link) => (
+        link.dropdown ? (
+          <div class="nav-item dropdown" data-dropdown>
+            <a href={link.href} class="nav-link">
+              {link.label} <span class="arrow"><MdKeyboardArrowDown /></span>
+            </a>
+            <div class="dropdown-menu">
+              {link.dropdown.map((item) => (
+                item.nested ? (
+                  <div class="dropdown-item nested-dropdown" data-nested>
+                    <a href={item.href} class="dropdown-link desktop-nav-link">
+                      {item.label} <span class="arrow-right">▸</span>
+                    </a>
+                    <div class="nested-menu">
+                      <div class="nested-grid">
+                        {item.nested.map((nestedItem) => (
+                          <a href={nestedItem.href} class="nested-link desktop-nav-link">
+                            {nestedItem.label}
+                          </a>
+                        ))}
+                      </div>
+                    </div>
+                  </div>
+                ) : (
+                  <a href={item.href} class="dropdown-link desktop-nav-link">
+                    {item.label}
+                  </a>
+                )
+              ))}
+            </div>
+          </div>
+        ) : (
+          <a href={link.href} class="nav-link">{link.label}</a>
+        )
+      ))}
+
+      <!-- Capability Statement Button -->
+      <div class="nav-item dropdown" data-dropdown>
+        <a href="#" class="btn btn-green">
+          Capability Statement <span class="arrow"><MdKeyboardArrowDown /></span>
+        </a>
+        <div class="dropdown-menu">
+          {capabilityDropdown.map((item) => (
+            <a href={item.href} target={item.target || "_self"} class="dropdown-link desktop-nav-link">{item.label}</a>
+          ))}
+        </div>
+      </div>
+
+      <!-- Join Team Button -->
+      <div class="nav-item dropdown" data-dropdown>
+        <a href="#" class="btn btn-yellow">
+          Join the Team <span class="arrow"><MdKeyboardArrowDown /></span>
+        </a>
+        <div class="dropdown-menu1">
+          {joinTeamDropdown.map((item) => (
+            <a href={item.href} class="dropdown-link1 desktop-nav-link">{item.label}</a>
+          ))}
+        </div>
+      </div>
+      
+      <!-- Right Slide Button -->
+      <button class="right-slide-btn" id="rightSlideBtn" aria-label="Open side menu">
+        <PiDotsThreeOutlineVerticalDuotone />
+      </button>
+    </nav>
+    
+    <!-- Right Slide Panel -->
+    <aside class="right-slide-panel" id="rightSlidePanel">
+      <div class="right-panel-overlay" id="rightPanelOverlay"></div>
+      <div class="right-panel-content">
+        <!-- Close Button -->
+        <button class="right-panel-close" id="rightPanelClose"  aria-label="Close panel">
+          <IoCloseOutline />
+        </button>
+        
+        <!-- Header -->
+        <div class="right-panel-header">
+          <h2>Others</h2>
+        </div>
+        
+        <!-- Links -->
+        <nav class="right-panel-nav">
+          <ul class="right-panel-menu">
+            {rightPanelLinks.map((link) => (
+              <li class="right-panel-item">
+                <a href={link.href} class="right-panel-link">
+                  {link.label}
+                </a>
+              </li>
+            ))}
+          </ul>
+        </nav>
+      </div>
+    </aside>
+
+    <!-- Mobile Menu Toggle -->
+    <button class="mobile-toggle" id="mobileToggle" aria-label="Toggle mobile menu">
+      <span></span>
+      <span></span>
+      <span></span>
+    </button>
+
+    <!-- Mobile Navigation -->
+    <nav class="nav-mobile" id="navMobile">
+      <div class="mobile-menu-content">
+        {navLinks.map((link) => (
+          link.dropdown ? (
+            <div class="mobile-item">
+              <button class="mobile-link mobile-dropdown-toggle" data-mobile-dropdown>
+                {link.label}
+                <span class="mobile-arrow">▾</span>
+              </button>
+              <div class="mobile-submenu">
+                {link.dropdown.map((item) => (
+                  item.nested ? (
+                    <div class="mobile-nested-item">
+                      <button class="mobile-nested-toggle" data-mobile-nested>
+                        {item.label}
+                        <span class="mobile-arrow">▾</span>
+                      </button>
+                      <div class="mobile-nested-menu">
+                        {item.nested.map((nestedItem) => (
+                          <a href={nestedItem.href} class="mobile-nested-link">
+                            {nestedItem.label}
+                          </a>
+                        ))}
+                      </div>
+                    </div>
+                  ) : (
+                    <a href={item.href} class="mobile-submenu-link">
+                      {item.label}
+                    </a>
+                  )
+                ))}
+              </div>
+            </div>
+          ) : (
+            <a href={link.href} class="mobile-link">{link.label}</a>
+          )
+        ))}
+
+        <!-- Mobile Buttons -->
+        <div class="mobile-buttons">
+          <div class="mobile-item">
+            <button class="mobile-link mobile-dropdown-toggle btn-green" data-mobile-dropdown>
+              Capability Statement
+              <span class="mobile-arrow">▾</span>
+            </button>
+            <div class="mobile-submenu">
+              {capabilityDropdown.map((item) => (
+                <a href={item.href} target={item.target || "_self"} class="mobile-submenu-link">{item.label}</a>
+              ))}
+            </div>
+          </div>
+          <div class="mobile-item">
+            <button class="mobile-link mobile-dropdown-toggle btn-yellow" data-mobile-dropdown>
+              Join the Team
+              <span class="mobile-arrow">▾</span>
+            </button>
+            <div class="mobile-submenu">
+              {joinTeamDropdown.map((item) => (
+                <a href={item.href} class="mobile-submenu-link">{item.label}</a>
+              ))}
+            </div>
+          </div>
+          
+          <!-- Right Panel Links in Mobile (Others Section) -->
+          <div class="mobile-others">
+            <div class="mobile-others-title">Others</div>
+            {rightPanelLinks.map((link) => (
+              <a href={link.href} class="mobile-link mobile-others-link">
+                {link.label}
+              </a>
+            ))}
+          </div>
+        </div>
+      </div>
+    </nav>
+  </div>
+</header>
+
+<script>
+  // =============================================
+  // DESKTOP DROPDOWN ANIMATION FUNCTIONS
+  // =============================================
+  
+  // Close desktop dropdown with fade animation
+  function closeDesktopDropdownWithAnimation(dropdownMenu: HTMLElement, callback?: () => void) {
+    if (dropdownMenu) {
+      // Add closing animation class
+      dropdownMenu.classList.add('closing');
+      
+      // Also close any nested menus
+      const nestedMenus = dropdownMenu.querySelectorAll('.nested-menu');
+      nestedMenus.forEach(nested => {
+        (nested as HTMLElement).classList.add('closing');
+      });
+      
+      // Wait for animation to complete
+      setTimeout(() => {
+        dropdownMenu.classList.remove('closing');
+        nestedMenus.forEach(nested => {
+          (nested as HTMLElement).classList.remove('closing');
+        });
+        
+        // Execute callback if provided (for navigation)
+        if (callback) callback();
+      }, 300); // Match animation duration
+    } else if (callback) {
+      callback();
+    }
+  }
+
+  // Handle desktop navigation link clicks
+  const desktopNavLinks = document.querySelectorAll('.desktop-nav-link');
+  
+  desktopNavLinks.forEach((link) => {
+    link.addEventListener('click', (e: Event) => {
+      const target = e.currentTarget as HTMLAnchorElement;
+      const href = target.getAttribute('href');
+      const linkTarget = target.getAttribute('target');
+      
+      // Only animate for actual navigation links
+      if (href && href !== '#') {
+        e.preventDefault();
+        
+        // Find the parent dropdown menu
+        const dropdownMenu = target.closest('.dropdown-menu, .dropdown-menu1') as HTMLElement;
+        const nestedMenu = target.closest('.nested-menu') as HTMLElement;
+        
+        // Determine which menu to animate
+        const menuToAnimate = nestedMenu || dropdownMenu;
+        
+        if (menuToAnimate) {
+          closeDesktopDropdownWithAnimation(menuToAnimate, () => {
+            // Handle external links (target="_blank")
+            if (linkTarget === '_blank') {
+              window.open(href, '_blank');
+            } else {
+              window.location.href = href;
+            }
+          });
+        } else {
+          // No dropdown, navigate directly
+          if (linkTarget === '_blank') {
+            window.open(href, '_blank');
+          } else {
+            window.location.href = href;
+          }
+        }
+      }
+    });
+  });
+
+  // =============================================
+  // MOBILE MENU ANIMATION FUNCTIONS
+  // =============================================
+  
+  // Helper function to close mobile menu with fade-left animation
+  function closeMobileMenuWithAnimation(callback?: () => void) {
+    const navMobile = document.getElementById('navMobile');
+    const mobileToggle = document.getElementById('mobileToggle');
+    
+    if (navMobile && navMobile.classList.contains('active')) {
+      // Add closing animation class
+      navMobile.classList.add('closing');
+      
+      // Wait for animation to complete before removing classes
+      setTimeout(() => {
+        navMobile.classList.remove('active', 'closing');
+        mobileToggle?.classList.remove('active');
+        document.body.classList.remove('menu-open');
+        
+        // Execute callback if provided (for navigation)
+        if (callback) callback();
+      }, 350); // Match animation duration
+    } else if (callback) {
+      // If menu not active, just execute callback
+      callback();
+    }
+  }
+
+  // Mobile menu toggle
+  const mobileToggle = document.getElementById('mobileToggle');
+  const navMobile = document.getElementById('navMobile');
+
+  if (mobileToggle && navMobile) {
+    mobileToggle.addEventListener('click', (e: Event) => {
+      e.stopPropagation();
+      
+      if (navMobile.classList.contains('active')) {
+        // Close with animation
+        closeMobileMenuWithAnimation();
+      } else {
+        // Open menu
+        mobileToggle.classList.add('active');
+        navMobile.classList.add('active');
+        document.body.classList.add('menu-open');
+      }
+    });
+
+    // Close menu when clicking outside
+    document.addEventListener('click', (e: Event) => {
+      const clickTarget = e.target as HTMLElement;
+      if (
+        navMobile.classList.contains('active') &&
+        !navMobile.contains(clickTarget) &&
+        !mobileToggle.contains(clickTarget)
+      ) {
+        closeMobileMenuWithAnimation();
+      }
+    });
+  }
+
+  // Add fade-left animation to ALL clickable links in mobile menu
+  const mobileMenuLinks = document.querySelectorAll(
+    '.nav-mobile .mobile-link:not(.mobile-dropdown-toggle), ' +
+    '.nav-mobile .mobile-submenu-link, ' +
+    '.nav-mobile .mobile-nested-link, ' +
+    '.nav-mobile .mobile-others-link'
+  );
+
+  mobileMenuLinks.forEach((link) => {
+    link.addEventListener('click', (e: Event) => {
+      const target = e.currentTarget as HTMLAnchorElement;
+      const href = target.getAttribute('href');
+      const linkTarget = target.getAttribute('target');
+      
+      // Only animate for actual navigation links (not dropdowns)
+      if (href && href !== '#') {
+        e.preventDefault();
+        
+        // Trigger fade-left animation then navigate
+        closeMobileMenuWithAnimation(() => {
+          // Handle external links (target="_blank")
+          if (linkTarget === '_blank') {
+            window.open(href, '_blank');
+          } else {
+            window.location.href = href;
+          }
+        });
+      }
+    });
+  });
+
+  // Mobile dropdown toggles (unchanged behavior - no navigation)
+  const mobileDropdownToggles = document.querySelectorAll('[data-mobile-dropdown]');
+  mobileDropdownToggles.forEach((toggle) => {
+    toggle.addEventListener('click', (e: Event) => {
+      e.preventDefault();
+      e.stopPropagation();
+      
+      const currentToggle = e.currentTarget as HTMLElement;
+      const submenu = currentToggle.nextElementSibling;
+      const isActive = currentToggle.classList.contains('active');
+
+      // Close all other dropdowns at the same level
+      const parentContainer = currentToggle.closest('.mobile-menu-content');
+      if (parentContainer) {
+        parentContainer.querySelectorAll('[data-mobile-dropdown]').forEach((otherToggle) => {
+          if (otherToggle !== currentToggle && otherToggle.closest('.mobile-menu-content') === parentContainer) {
+            otherToggle.classList.remove('active');
+            otherToggle.nextElementSibling?.classList.remove('active');
+          }
+        });
+      }
+
+      // Toggle current dropdown
+      currentToggle.classList.toggle('active', !isActive);
+      submenu?.classList.toggle('active', !isActive);
+    });
+  });
+
+  // Mobile nested dropdown toggles
+  const mobileNestedToggles = document.querySelectorAll('[data-mobile-nested]');
+  mobileNestedToggles.forEach((toggle) => {
+    toggle.addEventListener('click', (e: Event) => {
+      e.preventDefault();
+      e.stopPropagation();
+      
+      const currentToggle = e.currentTarget as HTMLElement;
+      const nestedMenu = currentToggle.nextElementSibling;
+      const isActive = currentToggle.classList.contains('active');
+
+      // Find the parent submenu container
+      const parentSubmenu = currentToggle.closest('.mobile-submenu');
+      
+      // Close all other nested menus within the same parent
+      if (parentSubmenu) {
+        parentSubmenu.querySelectorAll('[data-mobile-nested]').forEach((otherToggle) => {
+          if (otherToggle !== currentToggle) {
+            otherToggle.classList.remove('active');
+            const otherMenu = otherToggle.nextElementSibling;
+            if (otherMenu) {
+              otherMenu.classList.remove('active');
+            }
+          }
+        });
+      }
+
+      // Toggle current nested menu
+      currentToggle.classList.toggle('active', !isActive);
+      if (nestedMenu) {
+        nestedMenu.classList.toggle('active', !isActive);
+      }
+    });
+  });
+
+  // =============================================
+  // RIGHT SLIDE PANEL FUNCTIONALITY
+  // =============================================
+  
+  const rightSlideBtn = document.getElementById('rightSlideBtn');
+  const rightSlidePanel = document.getElementById('rightSlidePanel');
+  const rightPanelClose = document.getElementById('rightPanelClose');
+  const rightPanelOverlay = document.getElementById('rightPanelOverlay');
+
+  // Helper function to close right panel with animation
+  function closeRightPanelWithAnimation(callback?: () => void) {
+    const panel = document.getElementById('rightSlidePanel');
+    
+    if (panel && panel.classList.contains('active')) {
+      panel.classList.add('closing');
+      
+      setTimeout(() => {
+        panel.classList.remove('active', 'closing');
+        document.body.classList.remove('panel-open');
+        if (callback) callback();
+      }, 350);
+    } else if (callback) {
+      callback();
+    }
+  }
+
+  // Open right slide panel (only on desktop - above 1100px)
+  if (rightSlideBtn && rightSlidePanel) {
+    rightSlideBtn.addEventListener('click', (e: Event) => {
+      if (window.innerWidth >= 1100) {
+        e.stopPropagation();
+        rightSlidePanel.classList.add('active');
+        document.body.classList.add('panel-open');
+      }
+    });
+  }
+
+  // Close right slide panel - Close button
+  if (rightPanelClose && rightSlidePanel) {
+    rightPanelClose.addEventListener('click', () => {
+      closeRightPanelWithAnimation();
+    });
+  }
+
+  // Close right slide panel - Overlay click
+  if (rightPanelOverlay && rightSlidePanel) {
+    rightPanelOverlay.addEventListener('click', () => {
+      closeRightPanelWithAnimation();
+    });
+  }
+
+  // Close panel when clicking links (with animation)
+  const rightPanelLinksElements = document.querySelectorAll('.right-panel-link');
+  rightPanelLinksElements.forEach(link => {
+    link.addEventListener('click', (e: Event) => {
+      const target = e.currentTarget as HTMLAnchorElement;
+      const href = target.getAttribute('href');
+      
+      if (href && href !== '#') {
+        e.preventDefault();
+        
+        closeRightPanelWithAnimation(() => {
+          window.location.href = href;
+        });
+      }
+    });
+  });
+
+  // Escape key handler
+  document.addEventListener('keydown', (e: KeyboardEvent) => {
+    if (e.key === 'Escape') {
+      // Close right panel with animation
+      closeRightPanelWithAnimation();
+      
+      // Close mobile menu with animation
+      closeMobileMenuWithAnimation();
+    }
+  });
+
+  // Resize handler
+  let resizeTimer: ReturnType<typeof setTimeout>;
+  window.addEventListener('resize', () => {
+    clearTimeout(resizeTimer);
+    resizeTimer = setTimeout(() => {
+      // Close right panel on mobile
+      if (window.innerWidth < 1100) {
+        const panel = document.getElementById('rightSlidePanel');
+        if (panel?.classList.contains('active')) {
+          panel.classList.remove('active', 'closing');
+          document.body.classList.remove('panel-open');
+        }
+      }
+      
+      // Close mobile menu on desktop (without animation for resize)
+      if (window.innerWidth > 992) {
+        const toggle = document.getElementById('mobileToggle');
+        const mobile = document.getElementById('navMobile');
+        toggle?.classList.remove('active');
+        mobile?.classList.remove('active', 'closing');
+        document.body.classList.remove('menu-open');
+      }
+    }, 250);
+  });
+</script>
+
+<style>
+  /* ===== CSS VARIABLES ===== */
+  :root {
+    --green: #007a3d;
+    --green-dark: #005c2e;
+    --green-hover: #00994d;
+    --yellow: #f8c600;
+    --yellow-dark: #e5b400;
+    --topbar-green: #0e8641;
+    --white: #ffffff;
+    --text-dark: #333333;
+    --shadow-sm: 0 2px 5px rgba(0, 0, 0, 0.05);
+    --shadow-md: 0 4px 8px rgba(0, 0, 0, 0.1);
+    --shadow-lg: 0 8px 16px rgba(0, 0, 0, 0.1);
+    --transition: 0.3s ease;
+    --font-family: 'Plus Jakarta Sans', sans-serif;
+    --topbar-height: 44px;
+    --navbar-height: 70px;
+  }
+
+  body {
+    margin: 0;
+    font-family: var(--font-family) !important;
+    padding-top: calc(var(--topbar-height) + var(--navbar-height));
+  }
+
+  /* ===== TOPBAR ===== */
+  .topbar {
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: var(--topbar-height);
+    background-color: var(--topbar-green);
+    color: var(--white);
+    font-size: 14px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    z-index: 99;
+  }
+
+  .top21 {
+    display: flex;
+    width: 1450px;
+    justify-content: space-between;
+  }
+
+  .topbar-left,
+  .topbar-right {
+    display: flex;
+    align-items: center;
+    gap: 15px;
+    margin-left: 20px;
+  }
+
+  .topbar a {
+    color: var(--white);
+    text-decoration: none;
+    display: flex;
+    align-items: center;
+    gap: 5px;
+    transition: opacity var(--transition);
+  }
+
+  .topbar a:hover {
+    opacity: 0.8;
+  }
+
+  /* ===== NAVBAR ===== */
+  .navbar {
+    position: fixed;
+    top: var(--topbar-height);
+    left: 0;
+    width: 100%;
+    height: var(--navbar-height);
+    background: var(--white);
+    box-shadow: var(--shadow-sm);
+    z-index: 1000;
+  }
+
+  .navbar-container {
+    max-width: 1400px;
+    height: 100%;
+    margin: 0 auto;
+    padding: 0 20px;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    gap: 40px;
+  }
+
+  /* ===== LOGO ===== */
+  .logo {
+    flex-shrink: 0;
+  }
+
+  .logo img {
+    height: 42px;
+    width: auto;
+    display: block;
+  }
+
+  /* ===== DESKTOP NAVIGATION ===== */
+  .nav-desktop {
+    display: flex;
+    align-items: center;
+    gap: 25px;
+    flex: 1;
+    justify-content: flex-end;
+  }
+
+  .nav-link {
+    color: var(--green);
+    text-decoration: none;
+    font-weight: 500;
+    font-size: 17px;
+    white-space: nowrap;
+    transition: color var(--transition);
+    cursor: pointer;
+  }
+
+  .nav-link:hover {
+    color: var(--green-dark);
+  }
+
+  .nav-link .arrow {
+    font-size: 12px;
+    margin-left: 4px;
+  }
+
+  /* ===== DROPDOWN ===== */
+  .dropdown {
+    position: relative;
+  }
+
+  .dropdown-menu {
+    position: absolute;
+    top: calc(100% + 15px);
+    left: 0;
+    background: var(--green);
+    min-width: 250px;
+    border-radius: 8px;
+    padding: 10px 0;
+    box-shadow: var(--shadow-lg);
+    opacity: 0;
+    visibility: hidden;
+    transform: translateY(-10px);
+    transition: all var(--transition);
+    z-index: 100;
+    overflow: visible;
+    pointer-events: auto;
+  }
+
+  .dropdown-menu1 {
+    position: absolute;
+    top: calc(100% + 15px);
+    right: 0;
+    color: #000 !important;
+    background: #f8c600 !important;
+    min-width: 250px;
+    border-radius: 8px;
+    padding: 10px 0;
+    box-shadow: var(--shadow-lg);
+    opacity: 0;
+    visibility: hidden;
+    transform: translateY(-10px);
+    transition: all var(--transition);
+    z-index: 100;
+  }
+
+  /* ===== DESKTOP DROPDOWN CLOSING ANIMATIONS ===== */
+  .dropdown-menu.closing,
+  .dropdown-menu1.closing {
+    animation: dropdownFadeOutLeft 0.3s ease forwards;
+    pointer-events: none;
+  }
+
+  .nested-menu.closing {
+    animation: nestedFadeOutLeft 0.3s ease forwards;
+    pointer-events: none;
+  }
+
+  @keyframes dropdownFadeOutLeft {
+    0% {
+      opacity: 1;
+      transform: translateY(0) translateX(0);
+    }
+    100% {
+      opacity: 0;
+      transform: translateY(0) translateX(-20px);
+    }
+  }
+
+  @keyframes nestedFadeOutLeft {
+    0% {
+      opacity: 1;
+      transform: translateX(0);
+    }
+    100% {
+      opacity: 0;
+      transform: translateX(-20px);
+    }
+  }
+
+  .dropdown:hover .dropdown-menu1 {
+    opacity: 1;
+    visibility: visible;
+    transform: translateY(0);
+  }
+
+  .dropdown:hover .dropdown-menu {
+    opacity: 1;
+    visibility: visible;
+    transform: translateY(0);
+  }
+
+  .dropdown-link {
+    display: block;
+    color: var(--white);
+    text-decoration: none;
+    padding: 12px 20px;
+    transition: background var(--transition);
+    font-size: 14px;
+  }
+
+  .dropdown-link1 {
+    display: block;
+    color: black;
+    text-decoration: none;
+    padding: 12px 20px;
+    transition: background var(--transition);
+    font-size: 14px;
+  }
+
+  .dropdown-link:hover {
+    background: var(--green-hover);
+  }
+
+  .dropdown-link1:hover {
+    background: var(--yellow-dark);
+  }
+
+  /* ===== NESTED DROPDOWN ===== */
+  .nested-dropdown {
+    position: relative;
+  }
+
+  .nested-dropdown .dropdown-link {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+  }
+
+  .arrow-right {
+    font-size: 14px;
+  }
+
+  .nested-menu {
+    position: absolute;
+    top: 0;
+    left: 100%;
+    background: var(--green);
+    min-width: 500px;
+    border-radius: 8px;
+    padding: 10px;
+    box-shadow: var(--shadow-lg);
+    opacity: 0;
+    visibility: hidden;
+    transform: translateX(-10px);
+    transition: all var(--transition);
+    z-index: 101;
+    pointer-events: auto;
+  }
+
+  .nested-dropdown:hover .nested-menu {
+    opacity: 1;
+    visibility: visible;
+    transform: translateX(0);
+  }
+
+  .nested-grid {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(230px, 1fr));
+    gap: 8px;
+  }
+
+  .nested-link {
+    display: block;
+    color: var(--white);
+    text-decoration: none;
+    padding: 10px 15px;
+    border-radius: 4px;
+    transition: all var(--transition);
+    font-size: 14px;
+    line-height: 1.4;
+  }
+
+  .nested-link:hover {
+    background: var(--green-hover);
+    padding-left: 10px;
+  }
+
+  /* ===== BUTTONS ===== */
+  .btn {
+    padding: 10px 20px;
+    border-radius: 25px;
+    text-decoration: none;
+    font-weight: 500;
+    font-size: 16px;
+    white-space: nowrap;
+    transition: all var(--transition);
+    display: inline-flex;
+    align-items: center;
+    gap: 5px;
+    border: none;
+    cursor: pointer;
+  }
+
+  .btn-green {
+    background-color: var(--green);
+    color: var(--white);
+  }
+
+  .btn-green:hover {
+    background-color: var(--green-dark);
+  }
+
+  .btn-yellow {
+    background-color: var(--yellow);
+    color: #000;
+  }
+
+  .btn-yellow:hover {
+    background-color: var(--yellow-dark);
+  }
+
+  /* ===== RIGHT SLIDE BUTTON ===== */
+  .right-slide-btn {
+    background: transparent;
+    border: none;
+    font-size: 24px;
+    color: var(--green);
+    cursor: pointer;
+    padding: 5px;
+    transition: color var(--transition);
+    display: none;
+    align-items: center;
+    justify-content: center;
+  }
+
+  .right-slide-btn:hover {
+    color: var(--green-dark);
+  }
+
+  @media (min-width: 1100px) {
+    .right-slide-btn {
+      display: flex;
+    }
+  }
+
+  /* ===== RIGHT SLIDE PANEL ===== */
+  .right-slide-panel {
+    display: none;
+  }
+
+  @media (min-width: 1100px) {
+    .right-slide-panel {
+      display: block;
+      position: fixed;
+      top: 0;
+      right: 0;
+      width: 100%;
+      height: 100vh;
+      z-index: 9999;
+      pointer-events: none;
+    }
+
+    .right-slide-panel.active {
+      pointer-events: auto;
+    }
+  }
+
+  .right-panel-overlay {
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background: rgba(0, 0, 0, 0.5);
+    opacity: 0;
+    visibility: hidden;
+    transition: all 0.3s ease;
+    backdrop-filter: blur(2px);
+  }
+
+  .right-slide-panel.active .right-panel-overlay {
+    opacity: 1;
+    visibility: visible;
+  }
+
+  /* Right panel closing animation */
+  .right-slide-panel.closing .right-panel-overlay {
+    opacity: 0;
+  }
+
+  .right-panel-content {
+    position: absolute;
+    top: 0;
+    right: 0;
+    width: 320px;
+    height: 100vh;
+    background: #007a3d;
+    box-shadow: -4px 0 20px rgba(0, 0, 0, 0.2);
+    transform: translateX(100%);
+    transition: transform 0.4s cubic-bezier(0.4, 0, 0.2, 1);
+    overflow-y: auto;
+    -webkit-overflow-scrolling: touch;
+  }
+
+  .right-slide-panel.active .right-panel-content {
+    transform: translateX(0);
+  }
+
+  /* Right panel closing animation - slide out to right */
+  .right-slide-panel.closing .right-panel-content {
+    transform: translateX(100%);
+  }
+
+  .right-panel-close {
+    position: absolute;
+    top: 20px;
+    right: 20px;
+    background: rgba(255, 255, 255, 0.2);
+    border: none;
+    width: 40px;
+    height: 40px;
+    border-radius: 50%;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    cursor: pointer;
+    color: #ffffff;
+    font-size: 28px;
+    transition: all 0.3s ease;
+    z-index: 10;
+  }
+
+  .right-panel-close:hover {
+    background: rgba(255, 255, 255, 0.3);
+    transform: rotate(90deg);
+  }
+
+  .right-panel-header {
+    padding: 30px 25px 20px;
+    border-bottom: 1px solid rgba(255, 255, 255, 0.2);
+  }
+
+  .right-panel-header h2 {
+    color: #ffffff;
+    font-size: 28px;
+    font-weight: 700;
+    margin: 0;
+  }
+
+  .right-panel-nav {
+    padding: 20px 0;
+  }
+
+  .right-panel-menu {
+    list-style: none;
+    margin: 0;
+    padding: 0;
+  }
+
+  .right-panel-item {
+    margin: 0;
+  }
+
+  .right-panel-link {
+    display: block;
+    color: #ffffff;
+    text-decoration: none;
+    padding: 18px 25px;
+    font-size: 18px;
+    font-weight: 500;
+    transition: all 0.3s ease;
+    border-left: 4px solid transparent;
+  }
+
+  .right-panel-link:hover {
+    background: rgba(255, 255, 255, 0.1);
+    border-left-color: #f8c600;
+    padding-left: 30px;
+  }
+
+  /* ===== MOBILE TOGGLE ===== */
+  .mobile-toggle {
+    display: none;
+    flex-direction: column;
+    gap: 5px;
+    background: transparent;
+    border: none;
+    cursor: pointer;
+    padding: 5px;
+    z-index: 1002;
+  }
+
+  .mobile-toggle span {
+    width: 25px;
+    height: 3px;
+    background: var(--green);
+    border-radius: 3px;
+    transition: all var(--transition);
+  }
+
+  .mobile-toggle.active span:nth-child(1) {
+    transform: rotate(45deg) translate(7px, 7px);
+  }
+
+  .mobile-toggle.active span:nth-child(2) {
+    opacity: 0;
+  }
+
+  .mobile-toggle.active span:nth-child(3) {
+    transform: rotate(-45deg) translate(7px, -7px);
+  }
+
+  /* ===== MOBILE NAVIGATION ===== */
+  .nav-mobile {
+    display: none;
+    position: fixed;
+    top: calc(var(--topbar-height) + var(--navbar-height));
+    left: 0;
+    width: 100%;
+    height: calc(100vh - var(--topbar-height) - var(--navbar-height));
+    background: var(--green);
+    transform: translateX(-100%);
+    transition: transform var(--transition);
+    overflow-y: auto !important;
+    z-index: 999;
+    overscroll-behavior: contain;  
+    -webkit-overflow-scrolling: touch;
+  }
+
+  .nav-mobile.active {
+    transform: translateX(0);
+    animation: fadeInRight 0.35s ease forwards;
+  }
+
+  /* ===== MOBILE MENU FADE-LEFT EXIT ANIMATION ===== */
+  .nav-mobile.closing {
+    animation: fadeOutLeft 0.35s ease forwards;
+  }
+
+  @keyframes fadeOutLeft {
+    0% {
+      transform: translateX(0);
+      opacity: 1;
+    }
+    100% {
+      transform: translateX(-100%);
+      opacity: 0;
+    }
+  }
+
+  @keyframes fadeInRight {
+    0% {
+      transform: translateX(-100%);
+      opacity: 0;
+    }
+    100% {
+      transform: translateX(0);
+      opacity: 1;
+    }
+  }
+
+  .mobile-menu-content {
+    padding: 35px;
+  }
+
+  .mobile-item {
+    margin-bottom: 10px;
+  }
+
+  .mobile-link {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    color: var(--white);
+    text-decoration: none;
+    padding: 15px 20px;
+    background: rgba(255, 255, 255, 0.1);
+    border-radius: 8px;
+    font-weight: 500;
+    transition: background var(--transition);
+    border: none;
+    width: 90%;
+    text-align: left;
+    font-size: 16px;
+    cursor: pointer;
+    margin-bottom: 10px;
+    font-family: var(--font-family);
+  }
+
+  .mobile-link:hover,
+  .mobile-link:focus {
+    background: rgba(255, 255, 255, 0.2);
+  }
+
+  .mobile-dropdown-toggle {
+    cursor: pointer;
+  }
+
+  .mobile-arrow {
+    font-size: 14px;
+    transition: transform var(--transition);
+  }
+
+  .mobile-dropdown-toggle.active .mobile-arrow {
+    transform: rotate(180deg);
+  }
+
+  .mobile-submenu {
+    max-height: 0;
+    overflow: hidden;
+    transition: max-height 0.4s ease;
+    margin-top: 8px;
+  }
+
+  .mobile-submenu.active {
+    max-height: 3000px;
+  }
+
+  .mobile-submenu-link {
+    display: block;
+    color: var(--white);
+    text-decoration: none;
+    padding: 12px 20px;
+    background: rgba(255, 255, 255, 0.05);
+    border-radius: 6px;
+    margin-bottom: 6px;
+    transition: background var(--transition);
+    font-size: 15px;
+  }
+
+  .mobile-submenu-link:hover {
+    background: rgba(255, 255, 255, 0.15);
+  }
+
+  /* ===== MOBILE NESTED MENU ===== */
+  .mobile-nested-item {
+    margin-bottom: 8px;
+  }
+
+  .topbar-right {
+    margin-right: 40px !important;
+  }
+
+  .mobile-nested-toggle {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    width: 100%;
+    color: var(--white);
+    background: rgba(255, 255, 255, 0.08);
+    border: none;
+    padding: 12px 20px;
+    border-radius: 6px;
+    font-size: 15px;
+    font-weight: 500;
+    cursor: pointer;
+    transition: all var(--transition);
+    text-align: left;
+    font-family: var(--font-family);
+  }
+
+  .mobile-nested-toggle:hover {
+    background: rgba(255, 255, 255, 0.15);
+  }
+
+  .mobile-nested-toggle.active {
+    background: rgba(255, 255, 255, 0.2);
+  }
+
+  .mobile-nested-toggle.active .mobile-arrow {
+    transform: rotate(180deg);
+  }
+
+  .mobile-nested-menu {
+    max-height: 0;
+    overflow: hidden;
+    transition: max-height 0.4s ease;
+    margin-top: 8px;
+  }
+
+  .mobile-nested-menu.active {
+    max-height: 3000px;
+  }
+
+  .mobile-nested-link {
+    display: block;
+    color: var(--white);
+    text-decoration: none;
+    padding: 12px 15px;
+    background: rgba(255, 255, 255, 0.05);
+    border-radius: 4px;
+    margin-bottom: 6px;
+    transition: all var(--transition);
+    font-size: 14px;
+    border-left: 3px solid transparent;
+  }
+
+  .mobile-nested-link:hover,
+  .mobile-nested-link:active {
+    background: rgba(255, 255, 255, 0.15);
+    border-left-color: var(--yellow);
+    padding-left: 20px;
+  }
+
+  /* ===== MOBILE BUTTONS & OTHERS ===== */
+  .mobile-buttons {
+    margin-top: 20px;
+    padding-top: 20px;
+    border-top: 1px solid rgba(255, 255, 255, 0.2);
+  }
+
+  .mobile-link.btn-green {
+    background: rgba(255, 255, 255, 0.2);
+  }
+
+  .mobile-link.btn-yellow {
+    background: var(--yellow);
+    color: #000;
+  }
+
+  .mobile-link.btn-yellow:hover {
+    background: var(--yellow-dark);
+  }
+
+  .mobile-others {
+    margin-top: 20px;
+    padding-top: 20px;
+    border-top: 1px solid rgba(255, 255, 255, 0.2);
+  }
+
+  .mobile-others-title {
+    color: var(--white);
+    font-size: 18px;
+    font-weight: 700;
+    padding: 0 20px 15px;
+  }
+
+  .mobile-others-link {
+    margin-bottom: 10px;
+  }
+
+  /* Prevent body scroll when menus are open */
+  body.menu-open,
+  body.panel-open {
+    overflow: hidden;
+  }
+
+  /* ===== RESPONSIVE BREAKPOINTS ===== */
+  @media (max-width: 1200px) {
+    .navbar-container {
+      gap: 20px;
+    }
+
+    .nav-desktop {
+      gap: 15px;
+    }
+
+    .nav-link,
+    .btn {
+      font-size: 15px;
+    }
+  }
+
+  @media (max-width: 992px) {
+    .nav-desktop {
+      display: none;
+    }
+
+    .mobile-toggle {
+      display: flex;
+    }
+
+    .nav-mobile {
+      display: block;
+    }
+  }
+
+  @media (max-width: 768px) {
+    :root {
+      --topbar-height: 40px;
+      --navbar-height: 60px;
+    }
+
+    .topbar {
+      font-size: 12px;
+      padding: 0 15px;
+    }
+
+    .topbar-right {
+      gap: 10px;
+      margin-right: 20px;
+    }
+
+    .navbar-container {
+      padding: 0 15px;
+    }
+
+    .logo img {
+      height: 35px;
+    }
+
+    .mobile-menu-content {
+      padding: 15px;
+    }
+
+    .mobile-link {
+      padding: 10px 15px;
+      font-size: 15px;
+    }
+
+    .nav-mobile {
+      top: calc(var(--topbar-height) + var(--navbar-height));
+    }
+  }
+
+  @media (max-width: 480px) {
+    :root {
+      --navbar-height: 55px;
+    }
+
+    .logo img {
+      height: 30px;
+    }
+
+    .topbar {
+      padding: 0 10px;
+    }
+
+    .navbar-container {
+      padding: 0 10px;
+    }
+  }
+  /* 3. Better body scroll lock */
+body.menu-open {
+  overflow: hidden;
+  position: fixed;
+  width: 100%;
+  height: 100%;
+}
+
+/* 4. Extra padding on last section */
+.mobile-others {
+  padding-bottom: 60px;
+}
+
+</style>

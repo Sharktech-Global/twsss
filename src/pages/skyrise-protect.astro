@@ -1,0 +1,217 @@
+---
+import Layout from "../layouts/Layout.astro";
+import "../styles/skyrise-protect.css"
+import "aos/dist/aos.css";
+import image from "@astrojs/react";
+import waterImage from "../../public/servicesimages/sunrise21.png";
+import { Image } from "astro:assets";
+
+const currentYear = new Date().getFullYear();
+import { getSEO } from "../utils/getSEO";
+const seo = getSEO("skyrise");
+---
+
+<Layout title={seo.title} description={seo.description} keywords={seo.keywords}>
+
+    <section>
+<div class="inner-banner">
+  <div class="inner-banner-content">
+    <h1>Skyrise Protect Roof Top Water Proofing</h1>
+
+  </div>
+  </div>
+</section>
+
+
+
+<section class="water-wrapper">
+
+  <div class="left-box-fixed">
+    <div class="left-inner">
+      <h3 class="left-inner-head">Why Choose Skyrise Protect?</h3>
+      <p class="left-inner-body">
+      Elevate your building's protection with Skyrise Protect. Experience the perfect blend 
+      of strength, speed, and affordability, ensuring your rooftop is safeguarded against the elements and ready for immediate use.
+      </p>
+      <h4 class="left-head1">Cost Efficiency</h4>
+      <p class="left-inner-body">High-quality rooftop protection at a super competitive price point.</p>
+      <h4 class="left-head1">Easy Application</h4>
+      <p class="left-inner-body">Streamlined installation process suitable for various commercial rooftops.</p>
+
+      <h4 class="left-head1">Fast Curing Time</h4>
+      <p class="left-inner-body">Ready for use in just 10 minutes, minimising operational disruptions.</p>
+      <h4 class="left-head1">Superior Strength</h4>
+      <p class="left-inner-body">Engineered to handle heavy-duty usage, ensuring long-lasting protection.</p>
+    </div>
+  </div>
+
+  <div class="right-section">
+    <h2 class="right-side-head1">Skyrise ProtectTough enough for a helicopter landing, cured and
+         ready in 10 minutes at a lower cost and faster install!</h2>
+   <Image src={waterImage} alt="Water Generator" class="machine-img" />
+
+  <h2 class="right-side-head">Introducing Skyrise Protect: the ultimate solution for high-rise rooftop sealing.</h2>
+    <p class="right-side-para">
+    Water scarcity is a growing challenge worldwide, affecting homes, businesses, and industries. Our advanced atmospheric 
+    water generators provide a sustainable, off-grid solution by extracting moisture from the air and converting it into clean, drinkable water. Whether you need water for residential, commercial, or industrial applications, our range of high-capacity
+     water generators ensures a consistent and reliable supply, reducing dependency on municipal water sources.
+    </p>
+<a href="/roof-of-our-building.pdf" target="_blank" class="gh-outline">Australian Standards Approval PDF</a>
+
+<h2 class="right-side-head">What Threatens The Roof of Your Building?</h2>
+
+<div class="tabs-wrapper">
+
+  <!-- Tab Buttons -->
+  <div class="tabs-btn-group">
+    <button class="tab-btn active" data-tab="weather">Weather Conditions</button>
+    <button class="tab-btn" data-tab="stress">Structural Stress</button>
+    <button class="tab-btn" data-tab="mechanical">Mechanical Damage</button>
+    <button class="tab-btn" data-tab="neglect">Maintenance Neglect</button>
+    <button class="tab-btn" data-tab="environment">Environmental Hazards</button>
+    <button class="tab-btn" data-tab="aging">Aging and Wear</button>
+  </div>
+
+  <!-- Tab Content -->
+  <div class="tab-content-wrapper">
+
+    <!-- WEATHER -->
+    <div class="tab-content active" id="weather">
+    <h4>High Winds</h4>
+    <p>Strong winds can dislodge roofing materials and damage structures, leaving the rooftop vulnerable to further harm.</p>
+
+    <h4>Hailstorms</h4>
+    <p>Hail can puncture and erode surfaces, causing leaks and reducing the roof's lifespan.</p>
+
+    <h4>Heavy Rainfall</h4>
+    <p>Intense rain leads to water pooling, which weakens the structure and increases the risk of leaks.</p>
+
+    <h4>UV Exposure</h4>
+    <p>Prolonged sunlight exposure degrades materials, making them brittle and prone to cracking.</p>
+
+    </div>
+
+    <!-- STRESS -->
+    <div class="tab-content" id="stress">
+       <h4>Thermal Expansion</h4>
+        <p>Temperature fluctuations cause materials to expand and contract, leading to cracks and damage over time.</p>
+
+       <h4>Building Movement</h4>
+        <p>Natural building shifts, caused by wind or seismic activity, stress rooftop materials and connections.</p>
+
+        <h4>Load Stress</h4>
+        <p>Rooftop activity, like heavy equipment placement, adds strain to the roof's structural integrity.</p>
+
+        <h4>Stress Accumulation</h4>
+        <p>Repeated exposure to stress weakens materials, increasing the likelihood of failure.</p>
+
+    </div>
+
+    <!-- MECHANICAL DAMAGE -->
+    <div class="tab-content" id="mechanical">
+      <h4>Heavy Equipment</h4>
+<p>Rooftop HVAC units or other equipment can stress or puncture roofing if not installed properly.</p>
+
+    <h4>Foot Traffic</h4>
+    <p>Routine maintenance or inspections can wear down the surface, especially without protective measures.</p>
+
+    <h4>Falling Debris</h4>
+    <p>Objects dislodged from nearby structures or activities can damage the rooftop upon impact.</p>
+
+    <h4>Improper Handling</h4>
+    <p>Poorly handled installations or maintenance create weak points that compromise the roof.</p>
+
+    </div>
+
+    <!-- MAINTENANCE NEGLECT -->
+    <div class="tab-content" id="neglect">
+    <h4>Blocked Drains</h4>
+    <p>Debris in drainage systems causes water pooling, which increases the risk of leaks and damage.</p>
+    <h4>Debris Accumulation</h4>
+    <p>Build-up of leaves, dirt, and other materials adds weight and stress to the roof.</p>
+    <h4>Ignored Repairs</h4>
+    <p>Small issues left unaddressed can grow into major problems, leading to costly repairs.</p>
+
+<h4>Lack of Inspections</h4>
+<p>Without regular inspections, potential issues are overlooked and worsen over time.</p>
+
+    </div>
+
+   
+
+    <!-- AGING -->
+    <div class="tab-content" id="environment">
+      <h4>Pollution</h4>
+<p>Urban pollutants corrode materials, reducing their lifespan and effectiveness.</p>
+
+<h4>Bird Activity</h4>
+<p>Birds nesting or perching can damage surfaces and lead to material degradation.</p>
+
+<h4>Vegetation Growth</h4>
+<p>Plants growing in debris or cracks can root into the structure and cause harm.</p>
+
+<h4>Dust and Grime</h4>
+<p>Build-up of dirt and dust contributes to material wear and reduces rooftop efficiency.</p>
+
+    </div>
+
+    <div class="tab-content" id="aging">
+  <h4>Material Lifespan</h4>
+  <p>Even durable materials naturally deteriorate over time, reducing their effectiveness.</p>
+
+  <h4>Weathering</h4>
+  <p>Constant exposure to rain, wind, and sunlight accelerates the aging process.</p>
+
+  <h4>Structural Fatigue</h4>
+  <p>Repeated stress weakens the roof, leading to cracks and other damage.</p>
+
+  <h4>Material Failure</h4>
+  <p>Over time, aging materials become brittle and more prone to breaking or leaking.</p>
+</div>
+
+  </div>
+</div>
+
+<section class="three-col-section">
+  <div class="col-box">
+    <h3>Unmatched Strength and Durability</h3>
+    <p>
+      Skyrise Protect is designed to withstand extreme conditions, providing a robust barrier that keeps your rooftop infrastructure secure and reliable. Built for durability and unmatched performance, it’s even strong enough to handle the weight of an airplane.
+    </p>
+  </div>
+
+  <div class="col-box">
+    <h3>Rapid Installation and Quick Access</h3>
+    <p>
+      Time is of the essence in commercial settings. Skyrise Protect's innovative formulation allows for a swift installation process, curing and ready for use in just 10 minutes. This rapid turnaround minimizes downtime, allowing immediate access to your rooftop facilities.
+    </p>
+  </div>
+
+  <div class="col-box">
+    <h3>Spend Less Without Sacrificing Quality</h3>
+    <p>
+      Free up your budget! Our cost-effective solution provides superior durability and long-lasting performance, ensuring great value for your investment. Choosing Skyrise Protect lets you divert resources to other critical areas while still achieving top-tier rooftop protection.
+    </p>
+  </div>
+</section>
+
+</section>
+<script is:inline>
+// TAB SWITCHING
+document.querySelectorAll(".tab-btn").forEach(btn => {
+  btn.addEventListener("click", () => {
+
+    // Remove active from all buttons
+    document.querySelectorAll(".tab-btn").forEach(b => b.classList.remove("active"));
+    btn.classList.add("active");
+
+    // Hide all content
+    document.querySelectorAll(".tab-content").forEach(c => c.classList.remove("active"));
+
+    // Show selected tab content
+    const tabId = btn.dataset.tab;
+    document.getElementById(tabId).classList.add("active");
+  });
+});
+</script>
+</Layout>

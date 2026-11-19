@@ -1,0 +1,488 @@
+---
+import Layout from '../layouts/Layout.astro';
+import "../styles/about.css"
+import "aos/dist/aos.css";
+import banner from "../assets/home-imgs/home-handshake.jpg";
+import { Image } from "astro:assets";
+const currentYear = new Date().getFullYear();
+import { getSEO } from "../utils/getSEO";
+const seo = getSEO("about");
+---
+
+<Layout title={seo.title} description={seo.description} keywords={seo.keywords}>
+
+<section class="inner-banner">
+  <div class="inner-banner-content">
+    <h1>About Us</h1>
+    <p data-aos="fade-up">Home / About Us</p>
+  </div>
+</section>
+  <!-- Hero section --> 
+
+  <!-- About section -->
+  <section class="about-section" >
+    <div class="about-container">
+      <!-- Left Side: Image + Badge -->
+      <div class="about-image-wrapper" data-aos="fade-right">
+        <div class="about-image image-shine">
+          <Image  src={banner}  alt="Handshake partnership"  data-aos="zoom-in"/>
+        </div>
+
+        <div class="stats-badge" data-aos="zoom-in">
+  <h2 class="counter" data-target="8000">0</h2>
+  <p>Successful<br />Projects</p>
+</div>
+
+
+
+
+      </div>
+
+      <!-- Right Side: Content -->
+      <div class="about-content" data-aos="fade-left">
+        <p  class="scope-tag">ABOUT US</p>
+        <h2 class="reveal-letters">
+          Your Trusted Partner in <br />
+          Water Management and <br />
+          Facility Maintenance
+        </h2>
+
+        <p>
+          Buildings do not fail politely. A blocked drain does not wait for office hours. A leaking roof does not 
+          care that the tenant handover is booked for Monday. A plant room can look clean from the doorway and still 
+          be hiding a problem that will cost someone a weekend.
+          TWS Service & Solutions works in that space — the practical, sometimes awkward space between scheduled maintenance, 
+       urgent repairs, ageing assets, tenant expectations, compliance duties, and budgets that rarely stretch as far as they should.
+
+        </p>
+
+        <p>
+         As a <a href="https://www.twsss.com.au/contact"  style="text-decoration: none;"> <b>facility maintenance company NSW</b></a> property owners, strata managers, real estate teams, 
+         commercial operators, and site managers can call without needing to explain the basics, we 
+         treat maintenance as working infrastructure, not a list of isolated jobs. A broken door closer 
+         is not just a door closer. It can be a safety issue, an access issue, a tenant complaint, or the 
+         small sign that a building is not being looked after properly.
+        </p>
+
+        <a href="/contact" class="about-btn" data-aos="zoom-in-up">Contact Us</a>
+      </div>
+ 
+    </div>
+     <div class="features-container" > 
+
+    <div class="feature-item" data-aos="zoom-in-up">
+      <img src="/About_image/imgi_4_water-management-01.png" alt="">
+      <p>Innovative Water<br>Management</p>
+    </div>
+
+    <div class="feature-item" data-aos="zoom-in-up">
+      <img src="/About_image/imgi_5_facility-maintenance-01.png" alt="">
+      <p>Integrated Facility<br>Maintenance</p>
+    </div>
+
+    <div class="feature-item" data-aos="zoom-in-up">
+      <img src="About_image/imgi_6_expertise-01.png" alt="">
+      <p>Over A Decade Of<br>Expertise</p>
+    </div>
+
+    <div class="feature-item" data-aos="zoom-in-up" >
+      <img src="/About_image/imgi_7_client-centric-approach-01.png" alt="">
+      <p>Client–Centric<br>Approach</p>
+    </div>
+
+    <div class="feature-item" data-aos="zoom-in-up">
+      <img src="/About_image/imgi_8_advanced-technology.png" alt="">
+      <p>Advanced Technology<br>Integration</p>
+    </div>
+
+    <div class="feature-item" data-aos="zoom-in-up">
+      <img src="/About_image/imgi_9_sustainable-practices (1).png" alt="">
+      <p>Sustainable<br>Practices</p>
+    </div>
+
+  </div>
+  </section>
+
+<!-- ================= SECTION 1 — BEYOND THE WORK ORDER ================= -->
+<section class="twsSec_wrap twsSec_section">
+  <!-- Row 1: title only -->
+  <div class="twsSec_head twsSec_reveal">
+    <p class="twsSec_eyebrow">Our Approach</p>
+    <h2 class="twsSec_h2">Maintenance That Looks Beyond the Work Order</h2>
+  </div>
+
+  <!-- Row 2: image LEFT / content RIGHT -->
+  <div class="twsSec_grid twsSec_reveal">
+    <div class="twsSec_media">
+      <span class="twsSec_blob twsSec_blob--tl"></span>
+      <span class="twsSec_blob twsSec_blob--br"></span>
+      <img class="twsSec_img" src="https://www.twsss.com.au/_astro/our-faqs-img.yp8Kqpo2.webp" alt="TWS technician inspecting a facility properly">
+    </div>
+    <div class="twsSec_body">
+      <p class="twsSec_tag">The difference shows in the details.</p>
+      <p class="twsSec_p">A contractor who only fixes what is written on the work order may miss the cracked seal above the same doorway. Someone sent to patch paint may ignore the damp mark forming behind it. A technician rushing through a checklist may tick the box and leave the actual risk sitting there for the next person to inherit. That is where maintenance starts becoming expensive.</p>
+      <p class="twsSec_sub">We prefer to look properly.</p>
+      <p class="twsSec_p">That does not mean over-servicing. There is enough waste in this industry already. Replacing parts too early, quoting full refurbishments when a controlled repair would hold, sending three trades when one capable technician could have handled the job &mdash; none of that helps the client. Good maintenance is not always the biggest solution. Quite often it is the right small action done before the building forces a larger one.</p>
+      <p class="twsSec_p">TWS Service &amp; Solutions provides integrated facility maintenance across commercial, residential, retail, hospitality, healthcare, education, and mixed-use properties. The work can be routine, reactive, preventative, or project-based. Plumbing issues, electrical coordination, carpentry repairs, painting, pressure cleaning, general handyman works, make-good tasks, minor refurbishments, safety fixes, site presentation, and ongoing property upkeep all sit inside the same real-world problem: keeping a place functional without turning every issue into a drama.</p>
+      <a class="twsSec_cta" href="https://www.twsss.com.au/services/integrated-maintenance-services">
+        Explore our services
+        <svg width="16" height="16" viewBox="0 0 24 24" fill="none"><path d="M5 12h14M13 6l6 6-6 6" stroke="currentColor" stroke-width="2.2" stroke-linecap="round" stroke-linejoin="round"/></svg>
+      </a>
+    </div>
+  </div>
+</section>
+
+<script>
+(function(){
+  var els=document.querySelectorAll('.twsSec_reveal');
+  if(!('IntersectionObserver' in window)){els.forEach(function(e){e.classList.add('twsSec_in');});return;}
+  var io=new IntersectionObserver(function(entries){
+    entries.forEach(function(en){if(en.isIntersecting){en.target.classList.add('twsSec_in');io.unobserve(en.target);}});
+  },{threshold:.12});
+  els.forEach(function(e){io.observe(e);});
+})();
+</script>
+
+
+
+<!-- ================= SECTION 2 — WORKING AROUND PEOPLE (GREEN BAND) ================= -->
+<section class="twsSec_wrap twsSec_section twsSec_section--green">
+  <!-- Row 1: text LEFT / image RIGHT -->
+  <div class="twsSec_grid twsSec_grid--reverse twsSec_grid--top twsSec_reveal" style="margin-bottom:clamp(40px,5vw,72px);">
+    <div class="twsSec_media">
+      <span class="twsSec_blob twsSec_blob--br"></span>
+      <img class="twsSec_img" src="About_image/res21.jpg" alt="TWS working carefully around an occupied site">
+    </div>
+    <div class="twsSec_body">
+      <p class="twsSec_eyebrow twsSec_eyebrow--gold">On Occupied Sites</p>
+      <h2 class="twsSec_h2">Working Around People, Not Just Property</h2>
+      <p class="twsSec_tag">That sounds simple until the site is occupied.</p>
+      <p class="twsSec_p">Work around tenants is different. So is work around patients, guests, students, staff, retail customers, or residents who have already complained twice. A good technician needs more than tools. They need timing, restraint, clean work habits, communication, and enough sense to know when noise, dust, access, smell, or disruption will become the real problem.</p>
+      <p class="twsSec_p">That is rarely discussed in maintenance brochures.</p>
+    </div>
+  </div>
+
+  <!-- Row 2: image LEFT / text RIGHT -->
+  <div class="twsSec_grid twsSec_grid--top twsSec_reveal">
+    <div class="twsSec_media">
+      <span class="twsSec_blob twsSec_blob--tl"></span>
+      <img class="twsSec_img" src="About_image/res22.jpg" alt="TWS technician attending a metro maintenance call">
+    </div>
+    <div class="twsSec_body">
+      <p class="twsSec_p">We have seen clients get burned by the cheapest attendance fee. It looks attractive at first. Then the same issue returns, photos are poor, reports say almost nothing, no one owns the outcome, and the invoice trail becomes longer than the repair itself. Cheap work can still be good work. Expensive work can still be lazy. Price alone is a poor filter. The better question is whether the contractor understands the building, the urgency, the people affected, and the consequence of getting it wrong.</p>
+      <p class="twsSec_p">As a <b> facility maintenance company Sydney</b> clients may need for fast metro response, TWS Service &amp; Solutions is built around practical attendance, clear communication, and work that stands up after the technician leaves. Not perfect promises. Buildings are too unpredictable for that. Some leaks only show in wind-driven rain. Some drainage faults behave well during inspection and fail under load. Some old fittings cannot be repaired cleanly because the surrounding material has already reached the end of its life.</p>
+      <a class="twsSec_cta twsSec_cta--gold" href="https://www.twsss.com.au/contact">
+        Talk to our team
+        <svg width="16" height="16" viewBox="0 0 24 24" fill="none"><path d="M5 12h14M13 6l6 6-6 6" stroke="currentColor" stroke-width="2.2" stroke-linecap="round" stroke-linejoin="round"/></svg>
+      </a>
+    </div>
+  </div>
+</section>
+
+
+<!-- ================= SECTION 3 — HONEST REPAIRS & CLEAR REPORTING ================= -->
+<section class="twsSec_wrap twsSec_section twsSec_section--tint">
+  <!-- Row 1: image LEFT / text RIGHT -->
+  <div class="twsSec_grid twsSec_grid--top twsSec_reveal" style="margin-bottom:clamp(40px,5vw,72px);">
+    <div class="twsSec_media">
+      <span class="twsSec_blob twsSec_blob--tl"></span>
+      <img class="twsSec_img" src="About_image/res23.png" alt="TWS clear reporting and honest assessment on site">
+    </div>
+    <div class="twsSec_body">
+      <p class="twsSec_eyebrow">Honesty First</p>
+      <h2 class="twsSec_h2">Honest Repairs and Clear Reporting</h2>
+      <p class="twsSec_tag">A maintenance partner should say that early.</p>
+      <p class="twsSec_p">There are jobs where a patch is sensible. There are jobs where patching only buys resentment. There are also sites where the recommended repair will fail because the underlying design is wrong, water is travelling from another area, previous work has trapped moisture, or access is too limited to complete the repair properly. We would rather have that conversation before the invoice, not after the complaint.</p>
+      <p class="twsSec_p">That is why reporting matters. Not long reports written to protect nobody. Useful reports. Photos that show the issue clearly. Notes that explain what was done, what was not done, what needs watching, and when a larger decision may be needed. Property managers do not need vague phrases like &ldquo;all completed&rdquo; when the job has conditions attached. Owners do not need panic language when the issue is manageable.</p>
+      <p class="twsSec_p">A <a href="https://www.twsss.com.au/contact"  style="text-decoration: none;    color: black;"> <b>facility maintenance company NSW</b></a> clients rely on should reduce uncertainty, not create more admin.</p>
+    </div>
+  </div>
+
+  <!-- Row 2: text LEFT / image RIGHT -->
+  <div class="twsSec_grid twsSec_grid--reverse twsSec_grid--top twsSec_reveal">
+    <div class="twsSec_media">
+      <span class="twsSec_blob twsSec_blob--br"></span>
+      <img class="twsSec_img" src="About_image/res25.png" alt="TWS technician on an occupied maintenance site">
+    </div>
+    <div class="twsSec_body">
+      <p class="twsSec_p">TWS Service &amp; Solutions works with clients who want that kind of contractor: responsive, practical, careful with occupied spaces, and realistic about cost. The goal is not to make every property look brand new. Some buildings do not need that. The goal is to keep assets safe, presentable, compliant, usable, and less likely to surprise the people responsible for them.</p>
+      <p class="twsSec_p">For clients looking for a <a href="https://www.twsss.com.au"  style="text-decoration: none;    color: black;"> <b>Trusted facility contractor Sydney</b></a> teams can deal with directly, our role is to make maintenance easier to manage without pretending it is ever completely effortless.</p>
+      <p class="twsSec_p">Good work still needs access. It needs accurate information. It needs approval before a small problem becomes a larger one. It needs tenants to report faults early instead of waiting until water reaches the carpet. It needs owners to accept that deferred maintenance is not saving money; it is usually moving the cost to a worse day.</p>
+      <p class="twsSec_p">TWS Service &amp; Solutions understands that balance. Spend where the risk justifies it. Repair where repair is still honest. Replace when keeping the old asset alive has become false economy.</p>
+      <p class="twsSec_p"><strong style="color:var(--twsSec-green);">That is how a <a href="https://www.twsss.com.au"  style="text-decoration: none;    color: #1a8043;"> <b>facility maintenance company NSW</b></a> should operate.</strong></p>
+      <a class="twsSec_cta" href="https://www.twsss.com.au/contact">
+        Request an honest assessment
+        <svg width="16" height="16" viewBox="0 0 24 24" fill="none"><path d="M5 12h14M13 6l6 6-6 6" stroke="currentColor" stroke-width="2.2" stroke-linecap="round" stroke-linejoin="round"/></svg>
+      </a>
+    </div>
+  </div>
+</section>
+
+
+
+
+
+<div class="outer-wrapper">
+  <div class="tabs-wrapper">
+
+  <!-- Tab Buttons -->
+  <div class="tabs-header">
+    <button class="tab-btn active" data-tab="mission">🌀 Our Mission</button>
+    <button class="tab-btn" data-tab="vision">⚪ Our Vision</button>
+    <button class="tab-btn" data-tab="value">💎 Our Value</button>
+  </div>
+
+  <!-- Content Box -->
+  <div class="tabs-content">
+
+    <!-- Mission -->
+    <div id="mission" class="tab-content active">
+      <div class="tab-left">
+        <p>At TWS Service & Solutions, our mission is to deliver innovative, sustainable, and high-quality facility maintenance and water management solutions that enhance operational efficiency, longevity, and environmental responsibility. We are committed to providing customized services that meet the evolving needs of residential, commercial, and industrial clients.
+
+        </p>
+
+        <ul>
+          <li>Deliver tailored, high-quality solutions that optimize infrastructure performance.</li>
+          <li>Prioritize sustainability and environmental responsibility in all our projects.</li>
+          <li>Leverage cutting-edge technology to improve efficiency and minimize downtime.</li>
+          <li>Foster long-term client relationships through transparency, reliability, and excellence.</li>
+        </ul>
+      </div>
+
+      <div class="tab-right image-shine">
+        <img src="/About_image/imgi_13_mission.png" alt="" />
+      </div>
+    </div>
+
+    <!-- Vision -->
+    <div id="vision" class="tab-content">
+      <div class="tab-left">
+        <p>Our vision is to be Australia’s most trusted provider of integrated facility maintenance and water management solutions, setting new industry standards for quality, innovation, and sustainability. We aim to build a future where efficient, sustainable, and resilient infrastructure enhances the lives of businesses and communities alike.</p>
+
+        <ul>
+          <li>Lead the industry in sustainable infrastructure and water management solutions.</li>
+          <li>Lead the industry in sustainable infrastructure and water management solutions.</li>
+          <li>Expand our impact by offering high-quality, future-ready solutions across various sectors.</li>
+          <li>Cultivate a work environment that encourages growth, collaboration, and excellence. </li>
+        </ul>
+      </div>
+
+      <div class="tab-right image-shine">
+        <img src="/About_image/imgi_14_vision.png" alt="" />
+      </div>
+    </div>
+
+    <!-- Value -->
+    <div id="value" class="tab-content">
+      <div class="tab-left">
+        <p>At TWS Service & Solutions, our values define who we are and guide every decision we make. We are committed to upholding integrity, innovation, and excellence in every project we undertake.</p>
+
+          <ul>
+          <li><b>Integrity & Transparency:</b> We operate with honesty, trust, and accountability in every client interaction.</li>
+          <li><b>Innovation & Excellence:</b>  We embrace cutting-edge technologies and industry best practices to deliver top-tier solutions.</li>
+          <li><b>Sustainability & Responsibility:</b>  We are dedicated to environmentally responsible practices that ensure long-term benefits.</li>
+          <li><b>Client-Centric Approach:</b>  We prioritize our clients' needs, delivering tailored solutions with exceptional service and professionalism.</li>
+        </ul>
+      </div>
+
+      <div class="tab-right image-shine">
+        <img src="/About_image/imgi_15_value.png" alt="" />
+      </div>
+    </div>
+
+  </div>
+</div>
+</div>
+
+<section class="inner-banner1">
+  
+</section>
+
+<section class="scope-section">
+  <div class="scope-container">
+    
+    <div class="scope-left">
+      <p class="scope-tag">• SCOPE OF SERVICES</p>
+      <h2 class="scope-title reveal-letters">Comprehensive Solutions<br>Tailored to Your Needs</h2>
+      <h3 class="industries-title">Industries We Serve:</h3>
+    </div>
+
+    <div class="scope-right">
+      <p class="scope-text">
+        TWS Service & Solutions delivers customized water treatment solutions designed
+        to enhance operational efficiency, ensure compliance with health and safety
+        standards, and address diverse water quality challenges. Our expertise spans a
+        wide range of industries and sectors, providing both commercial and private
+        clients with innovative and reliable systems tailored to their specific needs.
+      </p>
+    </div>
+
+  </div>
+</section>
+<section class="tws-wrapper">
+  <div class="tws-container">
+
+    <!-- ========== ROW 1 ========== -->
+    <div class="tws-row">
+      <!-- Left -->
+      <div class="tws-point luffy">
+        <img src="/About_image/imgi_17_education.png" class="tws-icon" />
+        <div class="tws-content">
+          <h3>Education</h3>
+          <p>
+           Reliable water systems for schools, universities, and training facilities, ensuring a safe and healthy environment for students and staff.
+          </p>
+        </div>
+      </div>
+
+      <!-- Middle (empty) -->
+      <div class="tws-empty"></div>
+
+      <!-- Right -->
+      <div class="tws-point luffy">
+        <img src="/About_image/imgi_22_private-market.png" class="tws-icon" />
+        <div class="tws-content">
+          <h3>Private Market</h3>
+          <p>
+           Tailored water treatment for high-end residential properties, estates, and private developments, ensuring luxury water quality and reliability.
+          </p>
+        </div>
+      </div>
+    </div>
+
+    <!-- ========== ROW 2 ========== -->
+    <div class="tws-row">
+      <!-- Left -->
+      <div class="tws-point luffy">
+        <img src="/About_image/imgi_18_health1.png" class="tws-icon" />
+        <div class="tws-content">
+          <h3>Healthcare</h3>
+          <p>
+           Advanced water treatment solutions to meet the stringent standards of hospitals, clinics, and aged care facilities, ensuring patient safety and regulatory compliance.
+          </p>
+        </div>
+      </div>
+
+      <!-- Middle (LOGO) -->
+      <div class="tws-logo image-shine">
+        <img src="/About_image/imgi_20_scope-service-img.png" alt="TWS Logo" />
+      </div>
+
+      <!-- Right -->
+      <div class="tws-point luffy">
+        <img src="/About_image/imgi_23_factories.png" class="tws-icon" />
+        <div class="tws-content">
+          <h3>Factories and Industrial Facilities</h3>
+          <p>
+          Specialized systems for manufacturing plants, ensuring water quality for production processes and waste compliance.
+          </p>
+        </div>
+      </div>
+    </div>
+
+    <!-- ========== ROW 3 ========== -->
+    <div class="tws-row">
+      <!-- Left -->
+      <div class="tws-point luffy1">
+        <img src="/About_image/imgi_19_hospitality.png" class="tws-icon" />
+        <div class="tws-content">
+          <h3>Hospitality</h3>
+          <p>
+           High-quality water systems for hotels, restaurants, and recreational facilities, enhancing guest satisfaction and operational efficiency.
+
+          </p>
+        </div>
+      </div>
+
+      <!-- Middle -->
+      <div class="tws-point luffy1">
+        <img src="/About_image/imgi_21_public-services.png" class="tws-icon" />
+        <div class="tws-content">
+          <h3>Public Services</h3>
+          <p>
+          Robust water treatment for municipal and government facilities, ensuring clean water delivery to communities and public spaces.
+          </p>
+        </div>
+      </div>
+
+      <!-- Right -->
+      <div class="tws-point ">
+        <img src="/About_image/imgi_24_infrastructure.png" class="tws-icon" />
+        <div class="tws-content">
+          <h3>Infrastructure Projects</h3>
+          <p>
+          Solutions for large-scale infrastructure, including construction sites, transportation hubs, and urban developments, supporting sustainable and efficient water use.
+          </p>
+        </div>
+      </div>
+    </div>
+
+  </div>
+</section>
+
+<script>
+  document.addEventListener("DOMContentLoaded", () => {
+    const buttons = document.querySelectorAll(".tab-btn");
+    const contents = document.querySelectorAll(".tab-content");
+
+    buttons.forEach((btnEl) => {
+      const btn = btnEl as HTMLElement; // ⭐ FIX
+
+      btn.addEventListener("click", () => {
+        const tab = btn.dataset.tab!; // ⭐ FIX
+
+        // remove active
+        buttons.forEach((b) => (b as HTMLElement).classList.remove("active"));
+        contents.forEach((c) => (c as HTMLElement).classList.remove("active"));
+
+        // activate selected
+        btn.classList.add("active");
+        (document.getElementById(tab) as HTMLElement).classList.add("active");
+      });
+    });
+  });
+</script>
+
+
+<script is:inline>
+  document.addEventListener("DOMContentLoaded", () => {
+    const counterEl = document.querySelector(".counter");
+    if (!counterEl) return;
+
+    const target = Number(counterEl.dataset.target);
+
+    function startCounter() {
+      let current = 0;
+      const increment = Math.ceil(target / 80);
+
+      function update() {
+        current += increment;
+        if (current >= target) current = target;
+
+        counterEl.textContent = current + "+";
+
+        if (current < target) requestAnimationFrame(update);
+      }
+
+      update();
+    }
+
+    // OBSERVER → triggers every time the section is visible
+    const observer1 = new IntersectionObserver(
+      (entries) => {
+        entries.forEach((entry) => {
+          if (entry.isIntersecting) {
+            startCounter();
+          }
+        });
+      },
+      { threshold: 0.6 } // visible 60%
+    );
+
+    observer1.observe(counterEl);
+  });
+</script>
+
+</Layout>
+

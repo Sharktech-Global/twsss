@@ -1,0 +1,210 @@
+---
+import Layout from '../layouts/Layout.astro';
+import SliderServices from '../components/SliderServices';
+import SliderProject from '../components/SliderProject';
+import FAQ from "../components/faq";
+import "../styles/newhome.css";
+import banner21 from "../assets/home-image/imgi_46_home-21banner.webp";
+import divider from "../assets/home-image/home3divider.webp";
+import banner from "../assets/home-imgs/home-handshake.jpg";
+import light from "../assets/home-image/our-work-img-1.webp";
+import shake from "../assets/home-image/imgi_31_our-work-img-2.webp";
+import { Image } from "astro:assets";
+
+const currentYear = new Date().getFullYear();
+import { getSEO } from "../utils/getSEO";
+const seo = getSEO("home"); 
+---
+
+<Layout title={seo.title} description={seo.description} keywords={seo.keywords}>
+
+  <!-- Hero section --> 
+<section class="hero">
+  <!-- LCP Image: now directly in HTML -->
+  <img
+    src={banner21.src}
+    alt="Facility maintenance banner"
+    class="hero-bg"
+    width={banner21.width}
+    height={banner21.height}
+    fetchpriority="high"
+    loading="eager"
+    decoding="async"
+  />
+
+  <div class="hero-content">
+    <h1>
+      Integrated Facility<br />
+      Maintenance and Solutions <br />
+      Specialist.
+    </h1>
+  </div>
+</section>
+
+  <!-- About section -->
+  <section class="about-section" >
+    <div class="about-container">
+      <!-- Left Side: Image + Badge -->
+      <div class="about-image-wrapper" >
+        <div class="about-image image-shine">
+         <Image 
+    src={banner}
+  alt="Handshake"
+  width={504}
+  height={727}    
+  sizes="(max-width: 768px) 100vw, 504px"
+  loading="eager"
+  fetchpriority="high"
+  decoding="async"
+  data-aos="zoom-in"
+/>
+
+        </div>
+
+        <div class="stats-badge" data-aos="zoom-in">
+  <h2 class="counter" data-target="8000">0</h2>
+  <p>Successful<br />Projects</p>
+</div><script is:inline>
+document.addEventListener("DOMContentLoaded", () => {
+  const counters = document.querySelectorAll(".counter");
+  if (!counters.length) return;
+
+  counters.forEach(counterEl => {
+    const target = Number(counterEl.dataset.target);
+    const duration = 5000; // animation duration in ms
+    const frameRate = 60; // frames per second
+    const totalFrames = Math.round((duration / 1000) * frameRate);
+    const increment = target / totalFrames;
+
+    let current = 0;
+
+    function updateCounter() {
+      current += increment;
+      if (current >= target) current = target;
+      counterEl.textContent = Math.floor(current) + "+";
+      if (current < target) {
+        requestAnimationFrame(updateCounter);
+      }
+    }
+
+    const observer = new IntersectionObserver(
+      (entries, obs) => {
+        entries.forEach(entry => {
+          if (entry.isIntersecting) {
+            updateCounter();
+            obs.unobserve(entry.target); // stop observing for performance
+          }
+        });
+      },
+      { threshold: 0.6 }
+    );
+
+    observer.observe(counterEl);
+  });
+});
+</script>
+
+
+
+
+      </div>
+
+      <!-- Right Side: Content -->
+      <div class="about-content">
+        <p  class="sub-heading">• ABOUT US</p>
+        <h2 class="section-title reveal-letters">
+          Your Trusted Partner in <br />
+          Water Management and <br />
+          Facility Maintenance
+        </h2>
+
+        <p>
+TWS Service & Solutions sits in the part of property management that only gets noticed when something goes wrong.
+A leaking gutter over a retail entrance. A tenancy handover delayed because patch painting was left too late. Air-conditioning 
+complaints that turn into staff productivity issues before anyone checks the filters properly.
+ Good <a href="https://www.twsss.com.au"  style="text-decoration: none;    color: black;"><b>facility  maintenance services</b></a> are not about sending someone out after a problem becomes noisy. 
+They are about knowing which faults can wait, which ones become expensive by Friday, and which “minor” 
+issues usually point to something worse behind the wall.
+        </p>
+
+        <p>
+          The mistake is treating maintenance like a price comparison exercise. Cheap reactive work often looks fine on the invoice and poor on the 
+          second visit. Planned Fg cost more discipline upfront, but less panic.
+           For businesses comparing <a href="https://www.twsss.com.au/services/integrated-maintenance-services"  style="text-decoration: none;    color: black;"><b>commercial maintenance services sydney</b></a>  providers, the real question is not 
+           whether they can fix a door closer. It is whether they notice the loose hinge, the water stain, and the 
+           safety risk before the site manager has to ask.
+
+        </p>
+
+        <a href="/about-us" class="about-btn" data-aos="zoom-in-up">Read More</a>
+      </div>
+ 
+    </div>
+     <hr>
+<SliderServices client:visible />
+<hr>
+<SliderProject client:visible />
+  </section>
+
+
+
+<section class="full-image-section">
+  <Image 
+    src={divider}
+    alt="Banner"
+    sizes="(max-width: 768px) 100vw, 721px"
+    quality={70}
+    loading="lazy"
+    decoding="async"
+/>
+</section>
+
+
+<section class="hero21">
+    <div class="left-images" data-aos="fade-up" >
+
+        <!-- Green Rounded Background -->
+        <div class="green-bg large"></div>
+
+        <!-- Top Circular Image -->
+        <div class="image-circle image-shine"  >
+             <Image  src={light}  alt="Handshake partnership" />
+        </div>
+
+        <!-- Bottom Rounded Image -->
+        <div class="image-rounded image-shine"  >
+           <Image  src={shake}  alt="Handshake partnership" />
+        </div> 
+
+    </div>
+
+    <div class="right-content"  data-aos="fade-up">
+        <p class="sub-heading">• WHY WORK WITH US</p>
+
+        <h2 class="hero-main-title section-title reveal-letters">Your Partner in Quality<br>
+            Facility Maintenance &<br>
+            Capital Works
+        </h2>
+
+        <h3 class="green-text">Reliable Solutions for Commercial, Industrial, and Public Facilities</h3>
+
+        <p class="description">
+            TWS Service & Solutions brings over a decade of expertise in facility maintenance
+            and capital works, ensuring optimal performance, reduced  downtime, and long-term
+            asset reliability.
+        </p>
+
+     <ul class="checklist">
+    <li><b>Unmatched Quality:</b> High standards in every service</li>
+    <li><b>Expert Craftsmanship:</b> Skilled professionals delivering precision work</li>
+    <li><b>Customized Solutions:</b> Tailored maintenance and capital work plans to fit your needs</li>
+    <li><b>Energy Efficiency:</b> Smart strategies to reduce operational costs and improve sustainability</li>
+    <li><b>Comprehensive Capital Works:</b> Upgrades, refurbishments, and infrastructure improvements designed for longevity</li>
+</ul>
+    </div>
+</section>
+
+<section class="green-faq">
+<FAQ client:visible />
+</section>
+</Layout>

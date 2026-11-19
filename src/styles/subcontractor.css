@@ -1,0 +1,237 @@
+:root {
+  /* FONT FAMILY */
+  --font-heading: "Plus Jakarta Sans", sans-serif;
+  --font-content: "Plus Jakarta Sans", sans-serif;
+
+}
+body {
+    margin: 0;
+    font-family: var(--font-heading) !important;
+   
+}
+.inner-banner {
+  width: 100%;
+  height: 350px;
+  background: 
+    linear-gradient(rgba(0, 0, 0, 0.45), rgba(0, 0, 0, 0.45)),
+    url(../assets/join-team/subcon-1.png);
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  text-align: center;
+      background-size: cover;
+    background-repeat: no-repeat;
+    background-attachment: fixed;
+    background-position: center 0px;
+}
+
+.inner-banner-content h1 {
+  color: #fff;
+  font-size: 48px;
+  font-weight: 700;
+  margin: 0;
+}
+
+.inner-banner-content p {
+  color: #e5e5e5;
+  font-size: 18px;
+  margin-top: 10px;
+}
+@media (max-width: 768px) {
+  .inner-banner {
+    height: 220px;
+  }
+
+  .inner-banner-content h1 {
+    font-size: 25px;
+  }
+
+  .inner-banner-content p {
+    font-size: 15px;
+  }
+}
+
+/*--------------------*/
+/* main section*/
+/*--------------------*/.subcontractor-wrapper {
+  background: #007a38; /* Green BG */
+  padding: 80px 20px;
+  display: flex;
+  justify-content: center;
+}
+
+.subcontractor-container {
+  width: 85%;
+  max-width: 1100px;
+  background: #fff;
+  padding: 60px;
+  box-shadow: 0 0 50px rgba(255, 241, 155, 0.6); /* soft yellow glow */
+  border-radius: 8px;
+}
+
+.form-header {
+  text-align: center;
+  margin-bottom: 40px;
+}
+
+.top-label {
+  color: #d8a10d;
+  font-weight: 600;
+  font-size: 14px;
+  letter-spacing: 1px;
+  text-transform: uppercase;
+}
+
+.form-header h2 {
+  margin-top: 8px;
+  font-size: 32px;
+  color: #2c2c2c;
+  font-weight: 600;
+}
+
+.form-layout {
+  display: grid;
+  grid-template-columns: 45% 55%;
+  align-items: start;
+  gap: 30px;
+}
+
+/* ------------------------------------ */
+/* LEFT SECTION — STICKY                */
+/* ------------------------------------ */
+.left-visual {
+  position: sticky;
+  top: 160px;           
+  align-self: flex-start;
+  width: 100%;
+  text-align: center;
+}
+
+.handshake-img {
+    width: 100%;
+    max-width: 446px;
+    top: 40px;
+    padding: 48px;
+}
+
+/* Dot pattern */
+.dot-pattern {
+  width: 120px;
+  height: 120px;
+  background-image: radial-gradient(#ccc 2px, transparent 2px);
+  background-size: 12px 12px;
+}
+
+.pattern-top {
+  position: absolute;
+  top: 61px;
+  left: -30px;
+
+}
+
+.pattern-bottom {
+  position: absolute;
+    bottom: -8px;
+    /* left: 230px; */
+    right: -17px;
+}
+
+/* Right Side Form */
+.right-form {
+  width: 100%;
+}
+
+.form-slot {
+  border: 2px dashed #ccc;
+  padding: 40px;
+  border-radius: 10px;
+  text-align: center;
+  color: #999;
+}
+
+/* ========================================= */
+/*        RESPONSIVE BREAKPOINTS            */
+/* ========================================= */
+
+/* ---------- 1100px ---------- */
+@media (max-width: 1100px) {
+  .subcontractor-container {
+    padding: 40px;
+  }
+
+  .handshake-img {
+    max-width: 300px;
+  }
+
+  .dot-pattern {
+    width: 100px;
+    height: 100px;
+  }
+}
+
+/* ---------- 900px ---------- */
+@media (max-width: 900px) {
+  .form-layout {
+    grid-template-columns: 1fr;
+    gap: 10px;
+  }
+
+  /* Disable sticky on mobile */
+  .left-visual {
+    position: relative;
+    top: 0;
+    margin-bottom: 10px;
+  }
+
+  /* Hide image + dots */
+  .handshake-img,
+  .dot-pattern {
+    display: none;
+  }
+}
+
+/* ---------- 768px (tablet) ---------- */
+@media (max-width: 768px) {
+  .subcontractor-container {
+    padding: 30px;
+  }
+.form-header {
+    margin-bottom: 2px;
+}
+  .form-header h2 {
+    font-size: 26px;
+  }
+
+  .handshake-img {
+    max-width: 260px;
+  }
+
+  .form-slot {
+    padding: 30px;
+  }
+}
+
+/* ---------- 480px (mobile) ---------- */
+@media (max-width: 480px) {
+  .subcontractor-wrapper {
+    padding: 40px 10px;
+  }
+
+  .subcontractor-container {
+    width: 95%;
+    padding: 20px;
+  }
+
+  .form-header h2 {
+    font-size: 22px;
+  }
+
+  .handshake-img {
+    max-width: 220px;
+  }
+
+  .form-slot {
+    padding: 20px;
+    font-size: 14px;
+  }
+}

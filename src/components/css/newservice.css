@@ -1,0 +1,171 @@
+/* 🌿 Main Section */
+.services-section {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    background: #fff;
+    position: relative;
+    max-width: 1400px;
+    overflow: hidden;
+    margin: 0 auto;
+}
+
+/* 🌿 Container Layout */
+.services-section .container {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  gap: 40px;
+  width: 90%;
+  max-width: 1400px;
+}
+
+/* 🌿 Left Title Block (20% width) */
+.section-title {
+  flex: 0 0 20%;
+  font-size: 35px;
+  font-weight: 600;
+  line-height: 1.2;
+        color: #0e8641;  position: relative;
+  z-index: 2;
+}
+
+.section-title span {
+  display: block;
+}
+
+/* Optional Curved Background */
+
+/* 🌿 Right Carousel Block (80%) */
+.services-carousel {
+  flex: 1;
+  position: relative;
+  width: 80%;
+  z-index: 2;
+}
+
+/* 🌿 Individual Service Cards */
+.slide-data {
+  background: #fff;
+  border-radius: 16px;
+  text-align: center;
+  padding: 25px 10px;
+  transition: all 0.3s ease;
+
+  cursor: pointer;
+}
+
+.slide-data img {
+  width: 100%;
+  max-width: 60px;
+  height: auto;
+  margin: 0 auto 15px;
+  transition: transform 0.4s ease;
+    display: flex;
+  justify-content: center; 
+}
+
+.slide-data p {
+  font-size: 14px;
+  color: #333;
+  font-weight: 500;
+  margin: 0;
+    display: flex;
+  justify-content: center; 
+}
+
+
+
+.slide-data:hover img {
+  transform: scale(1.08);
+}
+.slide-data {
+  display: block;
+  text-decoration: none;
+}
+
+.slide-data p {
+  color: #333;
+  transition: color 0.3s ease;
+}
+
+.slide-data:hover p {
+  color: #0d875c; /* highlight on hover */
+}
+
+/* -------------------------- */
+/* 📱 RESPONSIVE MEDIA QUERIES */
+/* -------------------------- */
+
+/* Tablet View (1024px and below) */
+@media (max-width: 1024px) {
+  .services-section .container {
+    flex-direction: column;
+    align-items: center;
+    text-align: center;
+    gap: 40px;
+  }
+
+  .section-title {
+    flex: unset;
+    width: 100%;
+    font-size: 2.4rem;
+            color: #0e8641;
+  }
+
+  .services-carousel {
+    width: 100%;
+  }
+
+  .services-section::before {
+    width: 100%;
+    height: 180px;
+    clip-path: none;
+    background: linear-gradient(180deg, #e8f6ef 0%, #ffffff 100%);
+    top: 0;
+  }
+}
+h2.section-title.aos-init.aos-animate {
+    color: #0e8641;
+}
+/* Mobile View (768px and below) */
+@media (max-width: 768px) {
+  .section-title {
+    font-size: 2rem;
+  }
+
+  .slide-data {
+    padding: 18px 10px;
+  }
+
+  .slide-data img {
+    max-width: 100px;
+  }
+ .services-section .container {
+    flex-direction: column;
+    align-items: center;
+    text-align: center;
+    gap: 10px !important;
+  }
+  .slide-data p {
+    font-size: 0.9rem;
+  }
+}
+
+/* Small Mobile (480px and below) */
+@media (max-width: 480px) {
+  .section-title {
+    font-size: 1.8rem;
+            color: #0e8641;
+  }
+.services-section {
+  
+    padding: 21px 0;}
+  .slide-data img {
+        max-width: 70px;
+        border-radius: 10px;  }
+
+  .slide-data p {
+    font-size: 0.85rem;
+  }
+}
